@@ -225,6 +225,10 @@ header {
   background-color: #0b3954;
 }
 
+.shopping .magazin {
+  display: none;
+}
+
 @media (max-width: 1090px) {
   .header__inner-top {
     gap: 20px;
@@ -233,7 +237,6 @@ header {
 @media (max-width: 970px) {
   .header__menu {
     position: relative;
-    display: none;
     min-width: 30px;
     height: 20px;
   }
@@ -259,6 +262,79 @@ header {
   }
   .header__menu::after {
     bottom: 0;
+  }
+  .shopping .magazin {
+    display: block;
+  }
+  .shopping__price {
+    display: none;
+  }
+  .shopping {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 70px;
+  }
+  .shopping img {
+    width: 200%;
+  }
+  .shopping .cart,
+  .shopping .like {
+    margin: 0;
+  }
+  .shopping .cart span,
+  .shopping .like span {
+    top: -11px;
+    right: -31px;
+    font-size: 22px;
+  }
+  .shopping bottom {
+    order: 2;
+  }
+  .shopping .cart {
+    order: 3;
+  }
+  .shopping .like {
+    order: 4;
+  }
+  header .header__inner-bottom {
+    position: absolute;
+    top: 150px;
+    left: 0;
+  }
+  header .header__inner-bottom ul .sales {
+    display: none;
+  }
+  header .header__inner-bottom ul li svg {
+    display: none;
+  }
+  header .header__inner-bottom ul li::after {
+    content: none !important;
+  }
+  header .header__inner-bottom ul {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    gap: 10px;
+  }
+  .header__inner-bottom ul li {
+    flex-direction: row;
+    justify-content: normal;
+    gap: 15px;
+  }
+  .header__inner-bottom {
+    padding: 10px 10px 10px 10px;
+    background-color: #d2d2d2;
+    border-radius: 10px;
+  }
+  header .header__inner-bottom ul li span {
+    font-size: 16px;
+    color: #0B3954;
   }
 }
 body {
