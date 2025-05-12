@@ -225,6 +225,15 @@ header {
   background-color: #0b3954;
 }
 
+.header__menu {
+  display: none;
+}
+
+@media (max-width: 1090px) {
+  .header__inner-top {
+    gap: 20px;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;

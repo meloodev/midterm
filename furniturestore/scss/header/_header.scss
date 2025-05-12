@@ -192,6 +192,17 @@ header {
     background-color: #0b3954;
 }
 
+.header__menu {
+    display: none;
+}
+
+
+@media (max-width: 1090px) {
+    .header__inner-top {
+        gap: 20px;
+    }
+}
+
 
 // .header__inner-bottom::after {
 //     content: '';
