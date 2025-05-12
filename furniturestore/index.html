@@ -1,11 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner-top">
+                <a class="logo__wrapper" href="#">
+                    <img src="./scss/header/img/logo.svg" alt="logo">
+                </a>
+                <div class="header__search">
+                    <label for="find">
+                        <img src="./scss/header/img/search.svg" alt="search">
+                    </label>
+                    <input id="find" type="text" placeholder="What are you looking for?">
+                </div>
+
+                <div class="shopping">
+                    <div class="cart">
+                        <img src="./scss/header/img/cart.svg" alt="cart">
+                        <span>0</span>
+                    </div>
+                    <span class="shopping__price">$0.00</span>
+                    <div class="like">
+                        <img src="./scss/header/img/like.svg" alt="like">
+                        <span>0</span>
+                    </div>
+                    <button>
+                        <img src="./scss/header/img/user.svg" alt="user">
+                    </button>
+                </div>
+            </div>
+            <nav class="header__inner-bottom" role="navigation">
+                <ul>
+                    <li>
+                        <img src="./scss/header/img/chairs.svg" alt="chairs">
+                        <div class="chairs list-item">
+                            <span>Chairs</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" fill="none">
+                                <path
+                                    d="M11.126 5.417l.559.559c.229.254.229.635 0 .863l-4.926 4.926c-.254.254-.635.254-.863 0L.945 6.839a.63.63 0 0 1 0-.863l.559-.559c.254-.254.635-.229.889 0l2.92 3.072V1.177a.6.6 0 0 1 .609-.609h.813a.62.62 0 0 1 .609.609v7.313l2.895-3.072c.254-.229.635-.254.889 0z"
+                                    fill="#0b3954" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./scss/header/img/beds.svg" alt="beds">
+                        <div class="beds list-item">
+                            <span>Beds</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" fill="none">
+                                <path
+                                    d="M11.126 5.417l.559.559c.229.254.229.635 0 .863l-4.926 4.926c-.254.254-.635.254-.863 0L.945 6.839a.63.63 0 0 1 0-.863l.559-.559c.254-.254.635-.229.889 0l2.92 3.072V1.177a.6.6 0 0 1 .609-.609h.813a.62.62 0 0 1 .609.609v7.313l2.895-3.072c.254-.229.635-.254.889 0z"
+                                    fill="#0b3954" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./scss/header/img/tables.svg" alt="tables">
+                        <div class="tables list-item">
+                            <span>Tables</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" fill="none">
+                                <path
+                                    d="M11.126 5.417l.559.559c.229.254.229.635 0 .863l-4.926 4.926c-.254.254-.635.254-.863 0L.945 6.839a.63.63 0 0 1 0-.863l.559-.559c.254-.254.635-.229.889 0l2.92 3.072V1.177a.6.6 0 0 1 .609-.609h.813a.62.62 0 0 1 .609.609v7.313l2.895-3.072c.254-.229.635-.254.889 0z"
+                                    fill="#0b3954" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./scss/header/img/desks.svg" alt="desks">
+                        <div class="desks list-item">
+                            <span>Desks</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" fill="none">
+                                <path
+                                    d="M11.126 5.417l.559.559c.229.254.229.635 0 .863l-4.926 4.926c-.254.254-.635.254-.863 0L.945 6.839a.63.63 0 0 1 0-.863l.559-.559c.254-.254.635-.229.889 0l2.92 3.072V1.177a.6.6 0 0 1 .609-.609h.813a.62.62 0 0 1 .609.609v7.313l2.895-3.072c.254-.229.635-.254.889 0z"
+                                    fill="#0b3954" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./scss/header/img/cabinets.svg" alt="cabinets">
+                        <div class="cabinets list-item">
+                            <span>Cabinets</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" fill="none">
+                                <path
+                                    d="M11.126 5.417l.559.559c.229.254.229.635 0 .863l-4.926 4.926c-.254.254-.635.254-.863 0L.945 6.839a.63.63 0 0 1 0-.863l.559-.559c.254-.254.635-.229.889 0l2.92 3.072V1.177a.6.6 0 0 1 .609-.609h.813a.62.62 0 0 1 .609.609v7.313l2.895-3.072c.254-.229.635-.254.889 0z"
+                                    fill="#0b3954" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./scss/header/img/lighting.svg" alt="lighting">
+                        <div class="lighting list-item">
+                            <span>Lighting</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" fill="none">
+                                <path
+                                    d="M11.126 5.417l.559.559c.229.254.229.635 0 .863l-4.926 4.926c-.254.254-.635.254-.863 0L.945 6.839a.63.63 0 0 1 0-.863l.559-.559c.254-.254.635-.229.889 0l2.92 3.072V1.177a.6.6 0 0 1 .609-.609h.813a.62.62 0 0 1 .609.609v7.313l2.895-3.072c.254-.229.635-.254.889 0z"
+                                    fill="#0b3954" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="sales">
+                        <img src="./scss/header/img/w-star.svg" alt="w-star">
+                        <span>sales</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <main>
+        <section class="furniture">
+            <div class="container">
+                <div class="furniture__inner">
+                    <img src="./scss/sec-1-furniture/img/pic1.webp" alt="furniture-bg">
+                    <span class="furniture__eyebrow">BEFURNITURE</span>
+                    <h1>LUXURY FURNITURE</h1>
+                    <div class="furniture__collection">
+                        <a class="furniture__shop" href="#">GO TO SHOP</a>
+                        <a class="furniture__collection" href="#">SEE COLLECTION</a>
+                    </div>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <div class="products__top">
+                    <div class="products__top-item">
+                        <h4 class="products__top-eyebrow">SEARCH FOR</h4>
+                        <h2><span>24000</span><span>PRODUCTS</span></h2>
+                    </div>
+                    <div class="products__top-item">
+                        <div class="piece">
+                            <span>24000</span>
+                            <span>products</span>
+                        </div>
+                        <div class="year">
+                            <span>12</span>
+                            <span>year</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__bottom">
+                    <figure class="products__bottom-item">
+                        <img src="./scss/sec-2-products/img/chairs.svg" alt="chairs">
+                        <figcaption>Chairs</figcaption>
+                    </figure>
+                    <figure class="products__bottom-item">
+                        <img src="./scss/sec-2-products/img/beds.svg" alt="beds">
+                        <figcaption>Beds</figcaption>
+                    </figure>
+                    <figure class="products__bottom-item">
+                        <img src="./scss/sec-2-products/img/tables.svg" alt="tables">
+                        <figcaption>Tables</figcaption>
+                    </figure>
+                    <figure class="products__bottom-item">
+                        <img src="./scss/sec-2-products/img/desks.svg" alt="desks">
+                        <figcaption>Desks</figcaption>
+                    </figure>
+                    <figure class="products__bottom-item">
+                        <img src="./scss/sec-2-products/img/cabinets.svg" alt="cabinets">
+                        <figcaption>Cabinets</figcaption>
+                    </figure>
+                    <figure class="products__bottom-item">
+                        <img src="./scss/sec-2-products/img/lighting.svg" alt="lighting">
+                        <figcaption>Lighting</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider">
+            <div class="container">
+                <div class="slider__items">
+                    <article class="slider__item">
+                        <img src="./scss/sec-3-slider/img/furniturestore-home-pic1.webp" alt="img">
+                        <div class="slider__item-text">
+                            <span>Time to</span>
+                            <div class="slider__text-footer">
+                                <h3>BEDROOM</h3>
+                                <span></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slider__item">
+                        <img src="./scss/sec-3-slider/img/furniturestore-home-pic2.webp" alt="img">
+                        <div class="slider__item-text">
+                            <span>Time to</span>
+                            <div class="slider__text-footer">
+                                <h3>OFFICE</h3>
+                                <span></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slider__item">
+                        <img src="./scss/sec-3-slider/img/furniturestore-home-pic2.webp" alt="img">
+                        <div class="slider__item-text">
+                            <span>Time to</span>
+                            <div class="slider__text-footer">
+                                <h3>KITCHEN</h3>
+                                <span></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="spring">
+            <div class="container">
+                <div class="spring__inner">
+                    <img src="./scss/sec-4-spring/img/furniturestore-home-pic4.webp" alt="spring">
+                    <div class="spring__inner-ready">
+                        <span class="spring__eyebrow">SEARCH FOR</span>
+                        <h2 class="spring__title">GET READY FOR A SPRING</h2>
+                        <p class="spring__text">Metus ultricies curabitur sodales ipsum elit cubilia.</p>
+                        <a class="spring__btn" href="#">ACTUAL TRENDS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallary">
+            <div class="container">
+                <div class="gallary__inner">
+                    <div class="gallary__items">
+                        <article class="gallary__item">
+                            <img src="./scss/sec-5-gallary/img/1.webp" alt="img-1">
+                            <h4>Batchata lamp</h4>
+                            <span>-17%</span>
+                        </article>
+                        <article class="gallary__item">
+                            <img src="./scss/sec-5-gallary/img/2.webp" alt="img-2">
+                            <h4>Batchata lamp</h4>
+                            <span>-17%</span>
+                        </article>
+                        <article class="gallary__item">
+                            <img src="./scss/sec-5-gallary/img/3.webp" alt="img-3">
+                            <h4>Batchata lamp</h4>
+                            <span>-17%</span>
+                        </article>
+                        <article class="gallary__item">
+                            <img src="./scss/sec-5-gallary/img/4.webp" alt="img-4">
+                            <h4>Batchata lamp</h4>
+                            <span>-17%</span>
+                        </article>
+                        <article class="gallary__item">
+                            <img src="./scss/sec-5-gallary/img/5.webp" alt="img-5">
+                            <h4>Batchata lamp</h4>
+                            <span>-17%</span>
+                        </article>
+                        <article class="gallary__item">
+                            <img src="./scss/sec-5-gallary/img/6.webp" alt="img-6">
+                            <h4>Batchata lamp</h4>
+                            <span>-17%</span>
+                        </article>
+                    </div>
+                    <a class="gallary__btn" href="#">GO TO SHOP</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trends">
+            <div class="container">
+                <div class="trends__inner">
+                    <div class="trends__top">
+                        <img src="./scss/sec-6-trends/img/furniturestore-home-pic5.webp" alt="img">
+                        <div class="trends__top-item">
+                            <span>OUR MAGAZINE</span>
+                            <h2>SPRING TRENDS 2023</h2>
+                            <button class="trends__top-btn">DOWNLOAD</button>
+                        </div>
+                    </div>
+                    <div class="trends__bottom">
+                        <div class="trends__bottom-item">
+                            <h3>01</h3>
+                            <div class="trends__bottom-text">
+                                <p>Lectus libero nibh adipiscing blandit.</p>
+                                <span class="trends__bottom-date">03 - 12</span>
+                            </div>
+                        </div>
+                        <div class="trends__bottom-item">
+                            <h3>02</h3>
+                            <div class="trends__bottom-text">
+                                <p>Lectus libero nibh adipiscing blandit.</p>
+                                <span class="trends__bottom-date">03 - 12</span>
+                            </div>
+                        </div>
+                        <div class="trends__bottom-item">
+                            <h3>03</h3>
+                            <div class="trends__bottom-text">
+                                <p>Lectus libero nibh adipiscing blandit.</p>
+                                <span class="trends__bottom-date">23 - 40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="furniture">
+            <div class="container">
+                <div class="furniture__inner">
+                    <div class="furniture__top">
+                        <div class="furniture__top-item">
+                            <p class="furniture__top-text">Consequat ornare ipsum eget vel tincidunt. Quis nunc,
+                                nulla ac ut arcu orci porttitor proin pulvinar. Pulvinar
+                                arcu, habitant eget gravida amet at volutpat vehicula.
+                                Elit, phasellus facilisis sit amet, felis, lacus. Dui a, ut
+                                pulvinar sit pellentesque amet urna posuere.</p>
+                            <div class="furniture__top-about">
+                                <h4>Et congue ultricies</h4>
+                                <a class="furniture__top-btn" href="#">ABOUT US</a>
+                            </div>
+                        </div>
+                        <div class="furniture__top-item">
+                            <div class="furniture__top-descr">
+                                <img src="./scss/sec-7-furniture/img/furniturestore-home-icon1.svg" alt="home">
+                                <h3>20</h3>
+                                <p>YEARS IN THE FURNITURE BUSINESS</p>
+                            </div>
+                            <img src="./scss/sec-7-furniture/img/furniturestore-home-pic6.webp" alt="img">
+                        </div>
+                    </div>
+                    <div class="furniture__bottom">
+                        <div class="furniture__bottom-item">
+                            <h3>1300</h3>
+                            <span>SEARCH FOR</span>
+                        </div>
+                        <div class="furniture__bottom-item">
+                            <h3>1300</h3>
+                            <span>SEARCH FOR</span>
+                        </div>
+                        <div class="furniture__bottom-item">
+                            <h3>1300</h3>
+                            <span>SEARCH FOR</span>
+                        </div>
+                        <div class="furniture__bottom-item">
+                            <h3>1300</h3>
+                            <span>SEARCH FOR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter__top">
+                    <a href="#"><img src="./scss/sec-8-newsletter/img/alisa.svg" alt="alisa"></a>
+                    <a href="#"><img src="./scss/sec-8-newsletter/img/iconic.svg" alt="iconic"></a>
+                    <a href="#"><img src="./scss/sec-8-newsletter/img/summer.svg" alt="summer"></a>
+                    <a href="#"><img src="./scss/sec-8-newsletter/img/urban.svg" alt="urban"></a>
+                    <a href="#"><img src="./scss/sec-8-newsletter/img/natural.svg" alt="natural"></a>
+                    <a href="#"><img src="./scss/sec-8-newsletter/img/shutter-speed.svg" alt="shutter-speed"></a>
+                </div>
+                <div class="newsletter__bottom">
+                    <div class="newsletter__bottom-sale">
+                        <p>Subscribe to our newsletter and grab<span>30% OFF!</span></p>
+                        <img src="./scss/sec-8-newsletter/img/furniturestore-newsletter-pic1.svg" alt="img">
+                    </div>
+                    <form class="newsletter__bottom-form">
+                        <input type="email" placeholder="Your e-mail address...">
+                        <button type="submit">SIGN UP</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__items">
+                <div class="footer__contact">
+                    <img src="./scss/footer/img/furniturestore.svg" alt="footer-logo">
+                    <p>Quam pulvinar leo euismod
+                        id eu ultricies. Placerat proin
+                        rhoncus sit.</p>
+                    <a class="footer__contact-btn" href="#">CONTACT US</a>
+                    <ul class="footer__payments">
+                        <li>
+                            <img src="./scss/footer/img/visa.svg" alt="visa">
+                        </li>
+                        <li>
+                            <img src="./scss/footer/img/mastercard.svg" alt="mastercard">
+                        </li>
+                        <li>
+                            <img src="./scss/footer/img/paypal.svg" alt="paypal">
+                        </li>
+                        <li>
+                            <img src="./scss/footer/img/g-pay.svg" alt="g-pay">
+                        </li>
+                        <li>
+                            <img src="./scss/footer/img/apple-pay.svg" alt="apple-pay">
+                        </li>
+                    </ul>
+                </div>
+
+                <nav class="footer__links" aria-label="Useful Links">
+                    <h4>USEFUL LINKS</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">DELIVERY</a></li>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Free delivery</a></li>
+                        <li><a href="#">Faq</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer__service" aria-label="Useful Service">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Addresses</a></li>
+                        <li><a href="#">Account details</a></li>
+                        <li><a href="#">Lost password</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer__help" aria-label="Contacts Help">
+                    <h4>NEED HELP?</h4>
+                    <ul>
+                        <li><a href="tel:+61383766284">+61 3 8376 6284</a></li>
+                        <li><a href="tel:+61383766284">+61 3 8376 5084</a></li>
+                        <li>
+                            <p>MONDAY-FRIDAY<br>8AM - 5PM</p>
+                        </li>
+                        <li>
+                            <p>SATURDAY-SUNDAY<br>10AM - 2PM</p>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </footer> -->
+
 </body>
+
 </html>
+
+<!-- font-family: "Sora", sans-serif;
+font-family: "Poppins", sans-serif; -->

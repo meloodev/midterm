@@ -1,0 +1,24 @@
+@import './reset';
+
+@import './header/header';
+@import './sec-1-furniture/sec-1-furniture';
+@import './sec-2-products/sec-2-products';
+@import './sec-3-slider/sec-3-slider';
+@import './sec-4-spring/sec-4-spring';
+@import './sec-5-gallary/sec-5-gallary';
+@import './sec-6-trends/sec-6-trends';
+@import './sec-7-furniture/sec-7-furniture';
+@import './sec-8-newsletter/sec-8-newsletter';
+@import './footer/footer';
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
