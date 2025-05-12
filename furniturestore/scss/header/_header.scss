@@ -192,9 +192,8 @@ header {
     background-color: #0b3954;
 }
 
-.header__menu {
-    display: none;
-}
+
+
 
 
 @media (max-width: 1090px) {
@@ -203,6 +202,42 @@ header {
     }
 }
 
+
+@media (max-width: 970px) {
+    .header__menu {
+        position: relative;
+        display: none;
+        min-width: 30px;
+        height: 20px;
+    }
+
+    .header__menu::after,
+    .header__menu::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+    }
+
+    .header__menu span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #000;
+    }
+
+    .header__menu::before {
+        top: 0;
+    }
+
+    .header__menu::after {
+        bottom: 0;
+    }
+}
 
 // .header__inner-bottom::after {
 //     content: '';
