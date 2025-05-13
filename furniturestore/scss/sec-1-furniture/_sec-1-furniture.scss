@@ -78,9 +78,9 @@ h1 {
     background-color: #FFB128;
     width: 152px;
     color: #FFFFFF;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.furniture__shop:hover,
 .furniture__shop:active {
     background-color: #fff;
     color: #FFB128;
@@ -91,13 +91,15 @@ h1 {
     background-color: #fff;
     width: 184px;
     color: #FFB128;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.furniture__catalog:hover,
 .furniture__catalog:active {
     background-color: #FFB128;
     color: #fff;
 }
+
+
 
 
 .furniture__inner .poit-item {
@@ -127,6 +129,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .furniture__inner .poit-item>span>span {
@@ -141,6 +144,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #FFB128;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -150,11 +154,27 @@ h1 {
 //     scale: 1.1;
 // }
 
-.furniture__inner .poit-item:hover {
-    scale: .9;
+
+.furniture__inner .poit-item:active {
+    scale: .8;
 }
 
 
+@media (hover: hover) {
+    .furniture__catalog:hover {
+        background-color: #FFB128;
+        color: #fff;
+    }
+
+    .furniture__shop:hover {
+        background-color: #fff;
+        color: #FFB128;
+    }
+
+    .furniture__inner .poit-item:hover {
+        scale: .9;
+    }
+}
 
 .furniture__inner .point-one {
     position: absolute;
@@ -279,5 +299,5 @@ h1 {
     }
 
 
-    
+
 }

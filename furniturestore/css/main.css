@@ -74,6 +74,22 @@ header {
   flex: 1 1 100%;
 }
 
+.display {
+  display: block !important;
+}
+
+.cover {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  top: 0;
+  left: 0;
+  z-index: 6;
+  overflow-y: hidden;
+}
+
 .header__search label {
   position: absolute;
   top: 57%;
@@ -421,6 +437,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
+    z-index: 7;
   }
   .header__search.active input {
     padding-top: 13px;
@@ -437,6 +454,9 @@ header {
   }
   .header__inner-top {
     padding: 20px 0px 13px 0px;
+  }
+  body.active header .header__inner-bottom {
+    top: 77px;
   }
 }
 @media (max-width: 400px) {
@@ -528,9 +548,9 @@ h1 {
   background-color: #FFB128;
   width: 152px;
   color: #FFFFFF;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.furniture__shop:hover,
 .furniture__shop:active {
   background-color: #fff;
   color: #FFB128;
@@ -540,9 +560,9 @@ h1 {
   background-color: #fff;
   width: 184px;
   color: #FFB128;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.furniture__catalog:hover,
 .furniture__catalog:active {
   background-color: #FFB128;
   color: #fff;
@@ -574,6 +594,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .furniture__inner .poit-item > span > span {
@@ -587,12 +608,26 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: #FFB128;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.furniture__inner .poit-item:hover {
-  scale: 0.9;
+.furniture__inner .poit-item:active {
+  scale: 0.8;
 }
 
+@media (hover: hover) {
+  .furniture__catalog:hover {
+    background-color: #FFB128;
+    color: #fff;
+  }
+  .furniture__shop:hover {
+    background-color: #fff;
+    color: #FFB128;
+  }
+  .furniture__inner .poit-item:hover {
+    scale: 0.9;
+  }
+}
 .furniture__inner .point-one {
   position: absolute;
   top: 70.8%;
@@ -695,7 +730,8 @@ h1 {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
 }
 
 .container {

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const searchIcon = document.querySelector('.search-item');
     const headerSearch = document.querySelector('.header__search');
+    const headerSearchCover = document.querySelector('.header .cover');
     const menuList = document.querySelector('.header__inner-bottom');
 
 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headerSearch.classList.toggle('active');
         burgerMenu.classList.add('active');
         body.classList.remove('active');
+        headerSearchCover.classList.add('display');
     });
 
     body.addEventListener('click', (e) => {
@@ -25,8 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('active');
         }
 
+        if (headerSearchCover.contains(target)) {
+            headerSearchCover.classList.remove('display');
+            headerSearch.classList.toggle('active');
+
+        }
+
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 649) {
+            headerSearchCover.classList.remove('display');
+            headerSearch.classList.remove('active');
+        }
     });
 
 
-    
+
 });
