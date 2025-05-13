@@ -42,6 +42,7 @@ li {
 
 header {
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
 }
 
 .header__inner-top {
@@ -452,6 +453,243 @@ header {
   }
   body.active header .header__inner-bottom {
     top: 69px;
+  }
+}
+.furniture {
+  background-color: #0B3954;
+  width: 90%;
+  margin: 0 auto;
+  max-height: 680px;
+  border-radius: 32px;
+  padding-top: 40px;
+  font-family: "Sora", sans-serif;
+}
+
+.furniture__inner {
+  position: relative;
+  aspect-ratio: 1220/680;
+  width: 100%;
+}
+
+.furniture__inner picture img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 32px;
+}
+
+.furniture__inner-cover {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  max-width: 390px;
+}
+
+.furniture__eyebrow {
+  font-weight: 600;
+  font-size: clamp(0.625rem, 0.536rem + 0.446vw, 0.75rem);
+  line-height: 25px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.813rem, 0.25rem + 7.813vw, 4rem);
+  line-height: clamp(2.188rem, 0.536rem + 8.259vw, 4.5rem);
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+.furniture__collection {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.furniture__shop,
+.furniture__catalog {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  transition: all 0.3s ease-in-out;
+}
+
+.furniture__shop {
+  background-color: #FFB128;
+  width: 152px;
+  color: #FFFFFF;
+}
+
+.furniture__shop:hover,
+.furniture__shop:active {
+  background-color: #fff;
+  color: #FFB128;
+}
+
+.furniture__catalog {
+  background-color: #fff;
+  width: 184px;
+  color: #FFB128;
+}
+
+.furniture__catalog:hover,
+.furniture__catalog:active {
+  background-color: #FFB128;
+  color: #fff;
+}
+
+.furniture__inner .poit-item {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 70px;
+  height: 70px;
+  border: 0.333333px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  position: absolute;
+}
+
+.furniture__inner .poit-item > span {
+  width: 47px;
+  height: 47px;
+  border: 0.333333px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.furniture__inner .poit-item > span > span {
+  width: 24px;
+  height: 24px;
+  border: 0.333333px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFB128;
+}
+
+.furniture__inner .poit-item:hover {
+  scale: 0.9;
+}
+
+.furniture__inner .point-one {
+  position: absolute;
+  top: 70.8%;
+  left: 42%;
+  color: #fff;
+}
+
+.furniture__inner .point-two {
+  position: absolute;
+  top: 42.8%;
+  left: 68%;
+  color: #fff;
+}
+
+.furniture__inner .point-three {
+  position: absolute;
+  top: 65.7%;
+  left: 82.3%;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .furniture .container {
+    padding: 0px;
+  }
+  .furniture__inner {
+    width: 104%;
+    left: -2%;
+  }
+  .furniture__inner-cover {
+    top: 20px;
+    left: 53px;
+  }
+}
+@media (max-width: 768px) {
+  .furniture__inner picture img {
+    height: unset;
+  }
+  .furniture .container {
+    padding: 0px 10px;
+  }
+  .furniture__inner {
+    width: 100%;
+    left: 0%;
+    aspect-ratio: 780/812;
+  }
+  .furniture {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 0;
+  }
+  .furniture__inner .point-one {
+    top: 72.8%;
+    left: 18%;
+  }
+  .furniture__inner .point-two {
+    top: 49.8%;
+    left: 56%;
+  }
+  .furniture__inner .point-three {
+    top: 68.7%;
+    left: 77.3%;
+  }
+  .furniture__inner-cover {
+    left: clamp(1.5rem, 0.205rem + 6.473vw, 3.313rem);
+  }
+  .furniture__inner .poit-item {
+    width: clamp(3.125rem, 2.232rem + 4.464vw, 4.375rem);
+    height: clamp(3.125rem, 2.232rem + 4.464vw, 4.375rem);
+  }
+  .furniture__inner .poit-item > span {
+    width: clamp(2.188rem, 1.652rem + 2.679vw, 2.938rem);
+    height: clamp(2.188rem, 1.652rem + 2.679vw, 2.938rem);
+  }
+  .furniture__inner .poit-item > span > span {
+    width: clamp(1.188rem, 0.964rem + 1.116vw, 1.5rem);
+    height: clamp(1.188rem, 0.964rem + 1.116vw, 1.5rem);
+  }
+  .furniture__inner picture img {
+    border-radius: clamp(1.375rem, 0.929rem + 2.232vw, 2rem);
+  }
+  .furniture__collection {
+    gap: clamp(0.625rem, -0.179rem + 4.018vw, 1.75rem);
+  }
+  .furniture__shop,
+  .furniture__catalog {
+    font-size: clamp(0.625rem, 0.446rem + 0.893vw, 0.875rem);
+    height: clamp(1.625rem, 0.866rem + 3.795vw, 2.688rem);
+  }
+  .furniture__shop {
+    width: clamp(5.688rem, 2.964rem + 13.616vw, 9.5rem);
+  }
+  .furniture__catalog {
+    width: clamp(7.125rem, 4rem + 15.625vw, 11.5rem);
+  }
+  h1 {
+    margin-bottom: clamp(0.438rem, -1.393rem + 9.152vw, 3rem);
   }
 }
 body {
