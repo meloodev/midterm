@@ -434,6 +434,9 @@ header {
   .header__menu.active {
     margin-left: auto;
   }
+  .header__inner-top {
+    padding: 20px 0px 13px 0px;
+  }
 }
 @media (max-width: 400px) {
   .logo__wrapper img {
