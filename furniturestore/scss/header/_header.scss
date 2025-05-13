@@ -70,14 +70,25 @@ header {
     position: absolute;
     display: inline-block;
     text-align: center;
-    top: -6px;
-    right: -11px;
     background: #333333;
     padding: 2px 4px;
     color: #fff;
-    font-size: 11px;
     border-radius: 18px;
     line-height: 1;
+}
+
+
+.shopping .cart span {
+    top: -5px;
+    right: -8px;
+    font-size: 10px;
+}
+
+
+.shopping .like span {
+    top: -5px;
+    right: -9px;
+    font-size: 10px;
 }
 
 .shopping .shopping__price {
@@ -196,6 +207,11 @@ header {
     display: none;
 }
 
+.search-item {
+    display: none;
+}
+
+
 
 
 
@@ -212,6 +228,7 @@ header {
         position: relative;
         min-width: 30px;
         height: 20px;
+
     }
 
     .header__menu::after,
@@ -221,7 +238,8 @@ header {
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #000;
+        background-color: #0B3954;
+        transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
     }
 
     .header__menu span {
@@ -230,7 +248,8 @@ header {
         height: 2px;
         top: 50%;
         transform: translateY(-50%);
-        background-color: #000;
+        background-color: #0B3954;
+        transition: opacity 0.3s ease;
     }
 
     .header__menu::before {
@@ -241,64 +260,89 @@ header {
         bottom: 0;
     }
 
-    .shopping .magazin {
-        display: block;
+    @keyframes shake {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        20% {
+            transform: rotate(20deg);
+        }
+
+        40% {
+            transform: rotate(-20deg);
+        }
+
+        60% {
+            transform: rotate(10deg);
+        }
+
+        80% {
+            transform: rotate(-10deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
     }
 
-    .shopping__price {
+    body.active .header__menu {
+        animation: shake 0.3s ease;
+    }
+
+  
+
+    body.active .header__menu::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    body.active .header__menu::after {
+        transform: rotate(-45deg);
+        top: 9px;
+    }
+
+    body.active .header__menu span {
+        scale: 0;
+    }
+
+    body header .header__inner-bottom {
         display: none;
     }
 
-    .shopping {
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 100px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        padding: 0 70px;
+    body.active header .header__inner-bottom {
+        display: block;
+        position: fixed;
+        top: 84px;
+        right: 0%;
+        // font-size: 18px;
+        height: 100vh;
+        z-index: 4;
     }
 
-    .shopping img {
-        width: 200%;
+    body.active {
+        overflow-y: hidden;
+
     }
 
-    .shopping .cart,
-    .shopping .like {
-        margin: 0;
-    }
 
-    .shopping .cart span,
-    .shopping .like span {
-        top: -11px;
-        right: -31px;
-        font-size: 22px;
-    }
-
-    // .shopping .magazin {
-    //     order: 1;
+    // body.active main,
+    // body.active footer {
+    //     position: relative;
     // }
 
-    .shopping bottom {
-        order: 2;
-    }
 
-    .shopping .cart {
-        order: 3;
-    }
-
-    .shopping .like {
-        order: 4;
-    }
-
-    header .header__inner-bottom {
-        position: absolute;
-        top: 150px;
-        left: 0;
-        // font-size: 18px;
-    }
+    // body.active main::after,
+    // body.active footer::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0px;
+    //     left: 0px;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: #0000003a;
+    //     z-index: -1;
+    // }
 
 
 
@@ -328,9 +372,9 @@ header {
     }
 
     .header__inner-bottom {
-        padding: 10px 10px 10px 10px;
-        background-color: #d2d2d2;
-        border-radius: 10px;
+        padding: 10px 10px 10px 18px;
+        background-color: #f6f7f9;
+        // border-radius: 10px;
     }
 
     header .header__inner-bottom ul li span {
@@ -340,6 +384,138 @@ header {
 
 
 
+}
+
+@media (max-width: 768px) {
+    .shopping .magazin {
+        display: block;
+    }
+
+    .shopping__price {
+        display: none;
+    }
+
+    .shopping {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 60px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        z-index: 5;
+    }
+
+    .shopping img {
+        width: 26px;
+    }
+
+    .shopping .cart,
+    .shopping .like {
+        margin: 0;
+    }
+
+
+    .shopping .like span {
+        top: -6px;
+        right: -9px;
+        font-size: 11px;
+    }
+
+
+    .shopping .cart span {
+        top: -3px;
+        right: -8px;
+        font-size: 11px;
+        ;
+    }
+
+
+    // .shopping .magazin {
+    //     order: 1;
+    // }
+
+    .shopping bottom {
+        order: 2;
+    }
+
+    .shopping .cart {
+        order: 3;
+    }
+
+    .shopping .like {
+        order: 4;
+    }
+
+
+
+
+}
+
+@media (max-width: 650px) {
+    .header__search #find {
+        display: none;
+    }
+
+    .header__search label {
+        display: none;
+    }
+
+    .header__search.active #find {
+        display: block;
+    }
+
+    .header__search.active label {
+        display: block;
+    }
+
+    .header__search.active {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .header__search.active input {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .search-item {
+        display: block;
+    }
+
+    .search-item img {
+        height: 20px;
+    }
+
+    .header__menu.active {
+        margin-left: auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .logo__wrapper img {
+        width: 160px;
+    }
+
+    .header__menu {
+        height: 16px;
+        min-width: 24px;
+    }
+
+    .search-item img {
+        height: 17px;
+        margin-top: 3px;
+    }
+
+    body.active header .header__inner-bottom {
+        top: 69px;
+    }
 }
 
 // .header__inner-bottom::after {
