@@ -485,7 +485,7 @@ header {
   border-radius: 32px;
   padding-top: 40px;
   font-family: "Sora", sans-serif;
-  margin-bottom: 130px;
+  margin-bottom: 60px;
 }
 
 .furniture__inner {
@@ -849,7 +849,7 @@ h1 {
 
 @media (max-width: 596px) {
   .products__top {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 }
 .products__bottom .products__bottom-item:active {
