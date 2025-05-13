@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerMenu.classList.add('active');
         body.classList.remove('active');
         headerSearchCover.classList.add('display');
+        body.style = 'overflow-y: hidden;';
     });
 
     body.addEventListener('click', (e) => {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (headerSearchCover.contains(target)) {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.toggle('active');
-
+            body.style = 'overflow-y: unset;';
         }
 
     });
