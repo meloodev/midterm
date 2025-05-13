@@ -6,7 +6,8 @@
     border-radius: 32px;
     padding-top: 40px;
     font-family: "Sora", sans-serif;
-    margin-bottom: 60px;
+    //margin-bottom: 140px;
+    margin-bottom: clamp(4.375rem, -0.941rem + 11.076vw, 8.75rem);
 }
 
 .furniture__inner {
@@ -234,6 +235,7 @@ h1 {
         width: 100%;
         background-color: transparent;
         padding-top: 0;
+        margin-bottom: clamp(4.375rem, -0.089rem + 22.321vw, 10.625rem);
     }
 
 
