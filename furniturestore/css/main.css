@@ -271,6 +271,7 @@ header {
     position: relative;
     min-width: 30px;
     height: 20px;
+    cursor: pointer;
   }
   .header__menu::after,
   .header__menu::before {
@@ -373,6 +374,7 @@ header {
   header .header__inner-bottom ul li span {
     font-size: 16px;
     color: #0B3954;
+    user-select: none;
   }
 }
 @media (max-width: 768px) {
