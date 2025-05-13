@@ -338,10 +338,12 @@ header {
         z-index: 4;
     }
 
-    body.active {
+    body.active,
+    body.scroll-remove {
         overflow-y: hidden;
-
     }
+
+
 
 
     // body.active main,
