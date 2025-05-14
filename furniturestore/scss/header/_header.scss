@@ -12,6 +12,7 @@ header {
     gap: 60px;
 }
 
+
 .logo__wrapper img {
     width: 240px;
     height: auto;
@@ -332,7 +333,7 @@ header {
 
     body.active header .header__inner-bottom {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 84px;
         right: 0%;
         // font-size: 18px;
@@ -391,7 +392,7 @@ header {
         flex-direction: column;
         min-width: 200px;
         gap: 10px;
-        margin-bottom: 42vh;
+        margin-bottom: 42dvh;
     }
 
     .header__inner-bottom ul li {

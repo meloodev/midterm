@@ -337,7 +337,7 @@ header {
   }
   body.active header .header__inner-bottom {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 84px;
     right: 0%;
     height: 100vh;
@@ -366,7 +366,7 @@ header {
     flex-direction: column;
     min-width: 200px;
     gap: 10px;
-    margin-bottom: 42vh;
+    margin-bottom: 42dvh;
   }
   .header__inner-bottom ul li {
     flex-direction: row;
@@ -1271,6 +1271,7 @@ h1 {
   font-size: 35px;
   font-weight: 600;
   color: #fff;
+  width: 49px;
 }
 
 .trends__bottom-text p {
