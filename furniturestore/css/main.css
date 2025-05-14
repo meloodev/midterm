@@ -857,12 +857,14 @@ h1 {
   }
 }
 .products__bottom .products__bottom-item:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #FFFFFF;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.08);
 }
 
 @media (hover: hover) {
   .products__bottom .products__bottom-item:hover {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-color: #FFFFFF;
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.08);
   }
