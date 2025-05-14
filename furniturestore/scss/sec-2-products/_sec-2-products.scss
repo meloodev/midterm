@@ -1,6 +1,6 @@
 .products {
     font-family: "Sora", sans-serif;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
 }
 
 
@@ -118,7 +118,14 @@
     font-size: 20px;
     line-height: 28px;
     cursor: pointer;
+    user-select: none;
 }
+
+// @media (max-width: 768px) {
+//     .products {
+//         margin-bottom: 160px;
+//     }
+// }
 
 @media (max-width: 596px) {
     .products__top {
