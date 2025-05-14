@@ -147,3 +147,11 @@
         box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.08);
     }
 }
+
+
+@media (max-width: 343px) {
+    .products__bottom {
+        grid-template-columns: repeat(auto-fit, minmax(137px, 1fr));
+    }
+
+}
