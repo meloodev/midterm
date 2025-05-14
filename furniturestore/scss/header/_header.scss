@@ -338,6 +338,7 @@ header {
         // font-size: 18px;
         height: 100vh;
         z-index: 4;
+        overflow-y: auto;
     }
 
     body.active,
@@ -390,6 +391,7 @@ header {
         flex-direction: column;
         min-width: 200px;
         gap: 10px;
+        margin-bottom: 150px;
     }
 
     .header__inner-bottom ul li {
@@ -407,7 +409,7 @@ header {
     header .header__inner-bottom ul li span {
         font-size: 16px;
         color: #0B3954;
-         user-select: none;
+        user-select: none;
     }
 
 
@@ -501,7 +503,7 @@ header {
 
     .header__search.active {
         position: absolute;
-        top: 10%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;

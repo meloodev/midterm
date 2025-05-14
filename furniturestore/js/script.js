@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
             headerSearch.classList.remove('active');
         }
 
-        if (window.innerWidth > window.innerHeight) {
-            menuList.classList.add('scroll');
-        } else {
-            menuList.classList.remove('scroll');
-        }
+        // if (window.innerWidth > window.innerHeight) {
+        //     menuList.classList.add('scroll');
+        // } else {
+        //     menuList.classList.remove('scroll');
+        // }
     });
 
 
