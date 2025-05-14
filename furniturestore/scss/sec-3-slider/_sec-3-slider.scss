@@ -33,6 +33,7 @@
 
 .slider__text-footer h3 {
     font-weight: 700;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-size: clamp(1.188rem, 0.302rem + 2.698vw, 3rem); //font-size: 48px;
     line-height: clamp(0rem, -1.679rem + 5.116vw, 3.438rem); //line-height: 55px;
     color: #FFFFFF;
