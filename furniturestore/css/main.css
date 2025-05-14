@@ -941,6 +941,106 @@ h1 {
     transform: translateY(-10px);
   }
 }
+.spring {
+  margin-bottom: 100px;
+}
+
+.spring__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.spring__inner-ready {
+  max-width: 366px;
+}
+
+.spring__inner .spring__img-cover img {
+  max-width: 560px;
+}
+
+.spring__eyebrow {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #0B3954;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.spring__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+  color: #0B3954;
+  padding-bottom: 30px;
+}
+
+.spring__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5C676D;
+  padding-bottom: 30px;
+  max-width: 260px;
+}
+
+.spring__btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  width: 192px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  background-color: #FFB128;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media (hover: hover) {
+  .spring__btn:hover {
+    background-color: #225471;
+  }
+}
+.spring__btn:active {
+  background-color: #225471;
+}
+
+@media (max-width: 985px) {
+  .spring__img-cover {
+    width: 100%;
+    text-align: center;
+  }
+  .spring__inner {
+    gap: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .spring__img-cover img {
+    width: 460px;
+  }
+}
+@media (max-width: 620px) {
+  .spring__img-cover img {
+    width: 360px;
+  }
+}
+@media (max-width: 450px) {
+  .spring__img-cover img {
+    width: 300px;
+  }
+}
+@media (max-width: 370px) {
+  .spring__img-cover img {
+    width: 250px;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
