@@ -879,6 +879,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
+  justify-items: center;
 }
 
 .slider__item {
@@ -1024,6 +1025,9 @@ h1 {
 @media (max-width: 768px) {
   .spring__img-cover img {
     width: 460px;
+  }
+  .spring {
+    margin-bottom: 160px;
   }
 }
 @media (max-width: 620px) {
