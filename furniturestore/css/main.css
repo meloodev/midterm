@@ -347,6 +347,10 @@ header {
   body.scroll-remove {
     overflow-y: hidden;
   }
+  .scroll {
+    height: 100%;
+    overflow-y: scroll;
+  }
   header .header__inner-bottom ul .sales {
     display: none;
   }

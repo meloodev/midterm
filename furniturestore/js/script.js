@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.remove('active');
         }
+
+        if (window.innerWidth > window.innerHeight) {
+            menuList.classList.add('scroll');
+        } else {
+            menuList.classList.remove('scroll');
+        }
     });
 
 
