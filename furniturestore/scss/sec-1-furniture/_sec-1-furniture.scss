@@ -1,5 +1,7 @@
+@use '../utils/mixins';
+
 .furniture {
-    background-color: #0B3954;
+    @include mixins.bcolor(#0B3954, null);
     width: 90%;
     margin: 0 auto;
     max-height: 680px;
@@ -8,298 +10,282 @@
     font-family: "Sora", sans-serif;
     //margin-bottom: 140px;
     margin-bottom: clamp(4.375rem, -0.941rem + 11.076vw, 8.75rem);
-}
-
-.furniture__inner {
-    position: relative;
-    // height: 680px;
-    aspect-ratio: 1220 / 680;
-    width: 100%;
-}
 
 
-.furniture__inner picture img {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-
-    // aspect-ratio: 1200 / 693;
-
-    object-fit: cover;
-    object-position: center;
-    border-radius: 32px;
-    // z-index: -1;
-}
-
-.furniture__inner-cover {
-    position: absolute;
-    top: 48px;
-    left: 48px;
-    max-width: 390px;
-}
-
-.furniture__eyebrow {
-    font-weight: 600;
-    font-size: clamp(0.625rem, 0.536rem + 0.446vw, 0.75rem); //font-size: 12px;
-    line-height: 25px;
-    color: #FFFFFF;
-    margin-bottom: 5px;
-}
-
-h1 {
-    font-weight: 700;
-    font-size: clamp(1.813rem, 0.25rem + 7.813vw, 4rem); //font-size: 64px;
-    line-height: clamp(2.188rem, 0.536rem + 8.259vw, 4.5rem); //line-height: 72px;
-    color: #fff;
-    margin-bottom: 48px;
-}
-
-.furniture__collection {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.furniture__shop,
-.furniture__catalog {
-    font-weight: 600;
-    font-size: 14px;
-    height: 43px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 99px;
-    transition: all .3s ease-in-out;
-
-}
-
-.furniture__shop {
-    background-color: #FFB128;
-    width: 152px;
-    color: #FFFFFF;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.furniture__shop:active {
-    background-color: #fff;
-    color: #FFB128;
-}
-
-
-.furniture__catalog {
-    background-color: #fff;
-    width: 184px;
-    color: #FFB128;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.furniture__catalog:active {
-    background-color: #FFB128;
-    color: #fff;
-}
-
-
-
-
-.furniture__inner .poit-item {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    width: 70px;
-    height: 70px;
-    border: 0.333333px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    display: inline-block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-    position: absolute;
-}
-
-.furniture__inner .poit-item>span {
-    // display: inline-block;
-    width: 47px;
-    height: 47px;
-    border: 0.333333px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.furniture__inner .poit-item>span>span {
-    // display: inline-block;
-    width: 24px;
-    height: 24px;
-    border: 0.333333px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFB128;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-
-// .furniture__inner .poit-item:not(:hover) {
-//     transition: all 0.3s ease-in-out;
-//     /* Срабатывает только при уходе */
-//     scale: 1.1;
-// }
-
-
-.furniture__inner .poit-item:active {
-    scale: .8;
-}
-
-
-@media (hover: hover) {
-    .furniture__catalog:hover {
-        background-color: #FFB128;
-        color: #fff;
-    }
-
-    .furniture__shop:hover {
-        background-color: #fff;
-        color: #FFB128;
-    }
-
-    .furniture__inner .poit-item:hover {
-        scale: .9;
-    }
-}
-
-.furniture__inner .point-one {
-    position: absolute;
-    top: 70.8%;
-    left: 42.0%;
-    color: #fff;
-}
-
-.furniture__inner .point-two {
-    position: absolute;
-    top: 42.8%;
-    left: 68%;
-    color: #fff;
-}
-
-.furniture__inner .point-three {
-    position: absolute;
-    top: 65.7%;
-    left: 82.3%;
-    color: #fff;
-}
-
-@media (max-width: 1000px) {
-    .furniture .container {
-        padding: 0px;
-    }
-
-    .furniture__inner {
-        width: 104%;
-        left: -2%;
-    }
-
-    .furniture__inner-cover {
-        top: 20px;
-        left: 53px;
-    }
-
-}
-
-@media (max-width: 768px) {
-    .furniture__inner picture img {
-        height: unset;
-    }
-
-    .furniture .container {
-        padding: 0px 10px;
-    }
-
-    .furniture__inner {
+    &__inner {
+        position: relative;
+        // height: 680px;
+        aspect-ratio: 1220 / 680;
         width: 100%;
-        left: 0%;
-        aspect-ratio: 780 / 812;
     }
 
-    .furniture {
+
+    &__inner picture img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
         width: 100%;
-        background-color: transparent;
-        padding-top: 0;
-        margin-bottom: clamp(4.375rem, -0.089rem + 22.321vw, 10.625rem);
+        height: 100%;
+
+        // aspect-ratio: 1200 / 693;
+
+        object-fit: cover;
+        object-position: center;
+        border-radius: 32px;
+        // z-index: -1;
     }
 
-
-    .furniture__inner .point-one {
-        top: 72.8%;
-        left: 18%;
+    &__inner-cover {
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        max-width: 390px;
     }
 
-    .furniture__inner .point-two {
-        top: 49.8%;
-        left: 56%;
-    }
-
-    .furniture__inner .point-three {
-        top: 68.7%;
-        left: 77.3%;
-
-    }
-
-    .furniture__inner-cover {
-        left: clamp(1.5rem, 0.205rem + 6.473vw, 3.313rem);
-        // width: 80%;
-    }
-
-    .furniture__inner .poit-item {
-        width: clamp(3.125rem, 2.232rem + 4.464vw, 4.375rem);
-        height: clamp(3.125rem, 2.232rem + 4.464vw, 4.375rem);
-    }
-
-    .furniture__inner .poit-item>span {
-        width: clamp(2.188rem, 1.652rem + 2.679vw, 2.938rem);
-        height: clamp(2.188rem, 1.652rem + 2.679vw, 2.938rem);
-    }
-
-    .furniture__inner .poit-item>span>span {
-        width: clamp(1.188rem, 0.964rem + 1.116vw, 1.5rem);
-        height: clamp(1.188rem, 0.964rem + 1.116vw, 1.5rem);
-    }
-
-    .furniture__inner picture img {
-        border-radius: clamp(1.375rem, 0.929rem + 2.232vw, 2rem);
-    }
-
-    .furniture__collection {
-        gap: clamp(0.625rem, -0.179rem + 4.018vw, 1.75rem);
-    }
-
-    .furniture__shop,
-    .furniture__catalog {
-        font-size: clamp(0.625rem, 0.446rem + 0.893vw, 0.875rem);
-        height: clamp(1.625rem, 0.866rem + 3.795vw, 2.688rem);
-    }
-
-    .furniture__shop {
-        width: clamp(5.688rem, 2.964rem + 13.616vw, 9.5rem);
-    }
-
-    .furniture__catalog {
-        width: clamp(7.125rem, 4rem + 15.625vw, 11.5rem);
+    &__eyebrow {
+        font-weight: 600;
+        font-size: clamp(0.625rem, 0.536rem + 0.446vw, 0.75rem); //font-size: 12px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
     }
 
     h1 {
-        margin-bottom: clamp(0.438rem, -1.393rem + 9.152vw, 3rem);
+        font-weight: 700;
+        font-size: clamp(1.813rem, 0.25rem + 7.813vw, 4rem); //font-size: 64px;
+        line-height: clamp(2.188rem, 0.536rem + 8.259vw, 4.5rem); //line-height: 72px;
+        color: #fff;
+        margin-bottom: 48px;
+    }
+
+    &__collection {
+        @include mixins.flex(flex, null, center, null, 28px);
+    }
+
+    &__shop,
+    &__catalog {
+        font-weight: 600;
+        font-size: 14px;
+        height: 43px;
+        @include mixins.flex(flex, center, center, null, null);
+        border-radius: 99px;
+        transition: all .3s ease-in-out;
+
+    }
+
+    &__shop {
+        @include mixins.bcolor(#FFB128, #FFFFFF);
+        width: 152px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    &__shop:active {
+        @include mixins.bcolor(#fff, #FFB128);
     }
 
 
+    &__catalog {
+        @include mixins.bcolor(#fff, #FFB128);
+        width: 184px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    &__catalog:active {
+        @include mixins.bcolor(#FFB128, #fff);
+    }
+
+
+
+
+    &__inner .poit-item {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        width: 70px;
+        height: 70px;
+        border: 0.333333px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        display: inline-block;
+        @include mixins.flex(flex, center, center, null, null);
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        position: absolute;
+    }
+
+    &__inner .poit-item>span {
+        // display: inline-block;
+        width: 47px;
+        height: 47px;
+        border: 0.333333px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        @include mixins.flex(flex, center, center, null, null);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    &__inner .poit-item>span>span {
+        // display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: 0.333333px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        @include mixins.flex(flex, center, center, null, null);
+        @include mixins.bcolor(#FFB128, null);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+
+    // &__inner .poit-item:not(:hover) {
+    //     transition: all 0.3s ease-in-out;
+    //     /* Срабатывает только при уходе */
+    //     scale: 1.1;
+    // }
+
+
+    &__inner .poit-item:active {
+        scale: .8;
+    }
+
+
+    @media (hover: hover) {
+        &__catalog:hover {
+            @include mixins.bcolor(#FFB128, #fff);
+        }
+
+        &__shop:hover {
+            @include mixins.bcolor(#fff, #FFB128);
+        }
+
+        &__inner .poit-item:hover {
+            scale: .9;
+        }
+    }
+
+    &__inner .point-one {
+        position: absolute;
+        top: 70.8%;
+        left: 42.0%;
+        color: #fff;
+    }
+
+    &__inner .point-two {
+        position: absolute;
+        top: 42.8%;
+        left: 68%;
+        color: #fff;
+    }
+
+    &__inner .point-three {
+        position: absolute;
+        top: 65.7%;
+        left: 82.3%;
+        color: #fff;
+    }
+
+    @media (max-width: 1000px) {
+        & .container {
+            padding: 0px;
+        }
+
+        &__inner {
+            width: 104%;
+            left: -2%;
+        }
+
+        &__inner-cover {
+            top: 20px;
+            left: 53px;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        &__inner picture img {
+            height: unset;
+        }
+
+        & .container {
+            padding: 0px 10px;
+        }
+
+        &__inner {
+            width: 100%;
+            left: 0%;
+            aspect-ratio: 780 / 812;
+        }
+
+        & {
+            width: 100%;
+            @include mixins.bcolor(transparent, null);
+            padding-top: 0;
+            margin-bottom: clamp(4.375rem, -0.089rem + 22.321vw, 10.625rem);
+        }
+
+
+        &__inner .point-one {
+            top: 72.8%;
+            left: 18%;
+        }
+
+        &__inner .point-two {
+            top: 49.8%;
+            left: 56%;
+        }
+
+        &__inner .point-three {
+            top: 68.7%;
+            left: 77.3%;
+
+        }
+
+        &__inner-cover {
+            left: clamp(1.5rem, 0.205rem + 6.473vw, 3.313rem);
+            // width: 80%;
+        }
+
+        &__inner .poit-item {
+            width: clamp(3.125rem, 2.232rem + 4.464vw, 4.375rem);
+            height: clamp(3.125rem, 2.232rem + 4.464vw, 4.375rem);
+        }
+
+        &__inner .poit-item>span {
+            width: clamp(2.188rem, 1.652rem + 2.679vw, 2.938rem);
+            height: clamp(2.188rem, 1.652rem + 2.679vw, 2.938rem);
+        }
+
+        &__inner .poit-item>span>span {
+            width: clamp(1.188rem, 0.964rem + 1.116vw, 1.5rem);
+            height: clamp(1.188rem, 0.964rem + 1.116vw, 1.5rem);
+        }
+
+        &__inner picture img {
+            border-radius: clamp(1.375rem, 0.929rem + 2.232vw, 2rem);
+        }
+
+        &__collection {
+            gap: clamp(0.625rem, -0.179rem + 4.018vw, 1.75rem);
+        }
+
+        &__shop,
+        &__catalog {
+            font-size: clamp(0.625rem, 0.446rem + 0.893vw, 0.875rem);
+            height: clamp(1.625rem, 0.866rem + 3.795vw, 2.688rem);
+        }
+
+        &__shop {
+            width: clamp(5.688rem, 2.964rem + 13.616vw, 9.5rem);
+        }
+
+        &__catalog {
+            width: clamp(7.125rem, 4rem + 15.625vw, 11.5rem);
+        }
+
+        h1 {
+            margin-bottom: clamp(0.438rem, -1.393rem + 9.152vw, 3rem);
+        }
+
+    }
 
 }

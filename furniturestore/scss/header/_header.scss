@@ -1,3 +1,4 @@
+@use '../utils/mixins';
 header {
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
@@ -5,9 +6,7 @@ header {
 
 
 .header__inner-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex(flex, space-between, center, null, null);
     padding: 30px 0px 10px 0px;
     gap: 60px;
 }
@@ -20,8 +19,7 @@ header {
 }
 
 .shopping {
-    display: flex;
-    align-items: center;
+    @include mixins.flex(flex, null, center, null, null);
 }
 
 .shopping img {
@@ -33,6 +31,7 @@ header {
     position: relative;
     flex: 1 1 100%;
 }
+
 
 .display {
     display: block !important;
@@ -49,6 +48,7 @@ header {
     z-index: 6;
     overflow-y: hidden;
 }
+
 
 .header__search label {
     position: absolute;
@@ -133,19 +133,14 @@ header {
 
 
 .header__inner-bottom ul {
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
+    @include mixins.flex(flex, space-between, null, null, null);
     text-align: center;
 }
 
 
 
 .header__inner-bottom ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex(flex, center, center, column, null);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -158,17 +153,11 @@ header {
 }
 
 .header__inner-bottom ul .list-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
+    @include mixins.flex(flex, center, center, null, 10px);
 }
 
 .header__inner-bottom ul li.sales {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    @include mixins.flex(flex, null, center, column, 10px);
     background-color: #ffb128;
     padding: 8px 63px;
     border-radius: 20px 20px 0px 0px;
@@ -390,16 +379,12 @@ header {
     }
 
     header .header__inner-bottom ul {
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex(flex, null, null, column, 10px);
         min-width: 200px;
-        gap: 10px;
     }
 
     .header__inner-bottom ul li {
-        flex-direction: row;
-        justify-content: normal;
-        gap: 15px;
+        @include mixins.flex(null, normal, null, row, 15px);
     }
 
     .header__inner-bottom {
@@ -413,9 +398,6 @@ header {
         color: #0B3954;
         user-select: none;
     }
-
-
-
 }
 
 @media (max-width: 768px) {
@@ -604,4 +586,3 @@ header {
 //     background-color: #fff;
 //     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);    
 // }
-

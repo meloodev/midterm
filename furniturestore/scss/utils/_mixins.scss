@@ -1,0 +1,53 @@
+@mixin flex($df, $jc, $ai, $fd, $gap) {
+
+    @if $df !=null {
+        display: $df;
+    }
+
+    @if $jc !=null {
+        justify-content: $jc;
+    }
+
+    @if $ai !=null {
+        align-items: $ai;
+    }
+
+    @if $fd !=null {
+        flex-direction: $fd;
+    }
+
+    @if $gap !=null {
+        gap: $gap
+    }
+}
+
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// flex-direction: column;
+// gap: 20px;
+
+
+@mixin bcolor($bg, $color) {
+    @if $bg {
+        background-color: $bg;
+    }
+
+    @if $color {
+        color: $color;
+    }
+}
+
+@mixin fontSet($fw, $fs, $lh) {
+    @if $fw {
+        font-weight: $fw;
+    }
+
+    @if $fs {
+        font-size: $fs;
+    }
+
+    @if $lh {
+        line-height: $lh;
+    }
+}
