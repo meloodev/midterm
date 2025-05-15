@@ -131,8 +131,6 @@
 
     <main>
 
-
-
         <section class="furniture">
             <div class="container">
                 <div class="furniture__inner">
@@ -350,45 +348,47 @@
             </div>
         </section>
 
-        <!--  <section class="furniture">
+        <section class="business">
             <div class="container">
-                <div class="furniture__inner">
-                    <div class="furniture__top">
-                        <div class="furniture__top-item">
-                            <p class="furniture__top-text">Consequat ornare ipsum eget vel tincidunt. Quis nunc,
+                <div class="business__inner">
+                    <div class="business__top">
+                        <div class="business__top-item">
+                            <p class="business__top-text">Consequat ornare ipsum eget vel tincidunt. Quis nunc,
                                 nulla ac ut arcu orci porttitor proin pulvinar. Pulvinar
                                 arcu, habitant eget gravida amet at volutpat vehicula.
                                 Elit, phasellus facilisis sit amet, felis, lacus. Dui a, ut
                                 pulvinar sit pellentesque amet urna posuere.</p>
-                            <div class="furniture__top-about">
+                            <div class="business__top-about">
                                 <h4>Et congue ultricies</h4>
-                                <a class="furniture__top-btn" href="#">ABOUT US</a>
+                                <a class="business__top-btn" href="#">ABOUT US</a>
                             </div>
                         </div>
-                        <div class="furniture__top-item">
-                            <div class="furniture__top-descr">
-                                <img src="./scss/sec-7-furniture/img/furniturestore-home-icon1.svg" alt="home">
+                        <div class="business__top-item">
+                            <div class="business__top-descr">
+                                <img src="./scss/sec-7-business/img/business-home-icon1.svg" alt="home">
                                 <h3>20</h3>
                                 <p>YEARS IN THE FURNITURE BUSINESS</p>
                             </div>
-                            <img src="./scss/sec-7-furniture/img/furniturestore-home-pic6.webp" alt="img">
+                            <div class="business__top-img">
+                                <img src="./scss/sec-7-business/img/business-home-pic6.webp" alt="img">
+                            </div>
                         </div>
                     </div>
-                    <div class="furniture__bottom">
-                        <div class="furniture__bottom-item">
+                    <div class="business__bottom">
+                        <div class="business__bottom-item">
                             <h3>1300</h3>
                             <span>SEARCH FOR</span>
                         </div>
-                        <div class="furniture__bottom-item">
-                            <h3>1300</h3>
+                        <div class="business__bottom-item">
+                            <h3>88</h3>
                             <span>SEARCH FOR</span>
                         </div>
-                        <div class="furniture__bottom-item">
-                            <h3>1300</h3>
+                        <div class="business__bottom-item">
+                            <h3>30K</h3>
                             <span>SEARCH FOR</span>
                         </div>
-                        <div class="furniture__bottom-item">
-                            <h3>1300</h3>
+                        <div class="business__bottom-item">
+                            <h3>$5m</h3>
                             <span>SEARCH FOR</span>
                         </div>
                     </div>
@@ -408,8 +408,8 @@
                 </div>
                 <div class="newsletter__bottom">
                     <div class="newsletter__bottom-sale">
-                        <p>Subscribe to our newsletter and grab<span>30% OFF!</span></p>
-                        <img src="./scss/sec-8-newsletter/img/furniturestore-newsletter-pic1.svg" alt="img">
+                        <p>Subscribe to our newsletter and grab <span>30% OFF!</span></p>
+                        <img src="./scss/sec-8-newsletter/img/furniturestore-newsletter-pic1.webp" alt="img">
                     </div>
                     <form class="newsletter__bottom-form">
                         <input type="email" placeholder="Your e-mail address...">
@@ -417,15 +417,17 @@
                     </form>
                 </div>
             </div>
-        </section>-->
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <!--   <div class="footer__items">
+            <div class="footer__items">
                 <div class="footer__contact">
-                    <img src="./scss/footer/img/furniturestore.svg" alt="footer-logo">
-                    <p>Quam pulvinar leo euismod
+                    <a class="footer__contact-logo" href="#">
+                        <img class="" src="./scss/footer/img/furniturestore.svg" alt="footer-logo">
+                    </a>
+                    <p class="footer__contact-text">Quam pulvinar leo euismod
                         id eu ultricies. Placerat proin
                         rhoncus sit.</p>
                     <a class="footer__contact-btn" href="#">CONTACT US</a>
@@ -448,22 +450,22 @@
                     </ul>
                 </div>
 
-                <nav class="footer__links" aria-label="Useful Links">
+                <nav aria-label="Useful Links">
                     <h4>USEFUL LINKS</h4>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Shop</a></li>
                         <li><a href="#">Collections</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">DELIVERY</a></li>
+                        <li class="contact"><a href="#">Contact</a></li>
+                        <li class="delivery"><a href="#">DELIVERY</a></li>
                         <li><a href="#">How it works</a></li>
                         <li><a href="#">Free delivery</a></li>
                         <li><a href="#">Faq</a></li>
                     </ul>
                 </nav>
 
-                <nav class="footer__service" aria-label="Useful Service">
+                <nav aria-label="Useful Service">
                     <h4>CUSTOMER SERVICE</h4>
                     <ul>
                         <li><a href="#">Orders</a></li>
@@ -474,11 +476,11 @@
                     </ul>
                 </nav>
 
-                <nav class="footer__help" aria-label="Contacts Help">
+                <nav aria-label="Contacts Help">
                     <h4>NEED HELP?</h4>
                     <ul>
-                        <li><a href="tel:+61383766284">+61 3 8376 6284</a></li>
-                        <li><a href="tel:+61383766284">+61 3 8376 5084</a></li>
+                        <li class="phone"><a href="tel:+61383766284">+61 3 8376 6284</a></li>
+                        <li class="phone"><a href="tel:+61383766284">+61 3 8376 5084</a></li>
                         <li>
                             <p>MONDAY-FRIDAY<br>8AM - 5PM</p>
                         </li>
@@ -488,7 +490,7 @@
                     </ul>
                 </nav>
 
-            </div> -->
+            </div>
         </div>
     </footer>
     <script src="./js/script.js"></script>

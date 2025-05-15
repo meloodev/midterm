@@ -56,7 +56,6 @@
     border-radius: 99px;
     font-weight: 600;
     font-size: 14px;
-    line-height: 14px;
     background-color: #0B3954;
     color: #fff;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -150,11 +149,11 @@
 }
 
 
-@media (max-width: 768px) {}
+// @media (max-width: 768px) {}
 
-.trends {
-    margin-bottom: 160px;
-}
+// .trends {
+//     margin-bottom: 160px;
+// }
 
 @media (max-width: 640px) {
     .trends__bottom {
@@ -181,12 +180,12 @@
 }
 
 @media (max-width: 530px) {
-    .trends__bottom {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+    // .trends__bottom {
+    //     padding-right: 10px;
+    //     padding-left: 10px;
+    // }
 
-    .trends__top-item {
-        padding-left: 10px;
-    }
+    // .trends__top-item {
+    //     padding-left: 10px;
+    // }
 }

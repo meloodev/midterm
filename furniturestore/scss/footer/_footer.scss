@@ -1,0 +1,126 @@
+footer {
+    margin-bottom: 110px;
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+}
+
+.footer__contact {
+    max-width: 235px;
+}
+
+.footer__contact-logo img {
+    max-width: 182px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.footer__contact-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5C676D;
+    padding-bottom: 40px;
+}
+
+.footer__contact-btn {
+    font-family: "Sora", sans-serif;
+    width: 167px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99px;
+    background-color: #0B3954;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color .2s ease-in-out;
+    margin-bottom: 40px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+
+.footer__contact-btn:active {
+    background-color: #225471;
+    color: #fff;
+}
+
+@media (hover: hover) {
+    .footer__contact-btn:hover {
+        background-color: #225471;
+        color: #fff;
+    }
+}
+
+.footer__payments {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.footer__items nav h4 {
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #2A2B39;
+}
+
+.footer__items nav ul li {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #0B3954;
+}
+
+.footer__items nav ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer__items nav:not(:last-of-type) ul li:hover {
+    color: #FFB128;
+}
+
+.footer__items nav:nth-of-type(1) ul .contact {
+    margin-bottom: 50px;
+}
+
+.footer__items nav:nth-of-type(1) ul .delivery {
+    margin-bottom: 20px;
+}
+
+.footer__items nav:nth-of-type(3) {
+    font-family: "Sora", sans-serif
+}
+
+.footer__items nav:nth-of-type(3) ul .phone {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFB128;
+}
+
+@media (max-width: 724px) {
+    .footer__items nav:nth-of-type(3) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 386px) {
+    .footer__contact {
+        min-width: 100%;
+    }
+    .footer__contact-btn {
+        width: 100%;
+    }
+}

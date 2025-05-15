@@ -49,6 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
     });
 
+    // window.addEventListener('scroll', () => {
+    //     const currentScroll = window.pageYOffset;
+    //     console.log(currentScroll);
+    //     if (currentScroll > 168) {
+    //         menuList.classList.add('fixed');
+    //     } 
+    //     else {
+    //         menuList.classList.remove('fixed');
+    //     }
+    // });
+
 
 
 });

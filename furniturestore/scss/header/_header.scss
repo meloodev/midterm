@@ -130,6 +130,8 @@ header {
     cursor: pointer;
 }
 
+
+
 .header__inner-bottom ul {
     display: flex;
     justify-content: space-between;
@@ -569,7 +571,7 @@ header {
 
     body.active header .header__inner-bottom {
         top: 62px;
-         height: calc(100vh - 123px);
+        height: calc(100vh - 123px);
     }
 }
 
@@ -588,3 +590,18 @@ header {
 // .header__inner-bottom:hover::after {
 //   opacity: 1;
 // }
+
+
+
+// .fixed {
+//     position: fixed;
+//     width: 100%;
+//     margin: 0 auto;
+//     top: 0;
+//     left: 0;
+//     transition: top 1s ease-in-out;
+//     z-index: 10;
+//     background-color: #fff;
+//     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);    
+// }
+
