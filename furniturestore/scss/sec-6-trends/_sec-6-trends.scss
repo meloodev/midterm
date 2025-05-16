@@ -36,7 +36,7 @@
     }
 
     &__top-item h2 {
-        @include mixins.fontSet(700, clamp(2.438rem, -0.466rem + 14.516vw, 3rem), 55px);
+        @include mixins.fontSet(700, clamp(2.25rem, -0.75rem + 15.000vw, 3rem), 55px);
         //font-size: 48px;
         color: #FFFFFF;
         padding-bottom: 31px;

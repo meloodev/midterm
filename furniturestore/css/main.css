@@ -1144,7 +1144,7 @@ header {
 }
 .trends__top-item h2 {
   font-weight: 700;
-  font-size: clamp(2.438rem, -0.466rem + 14.516vw, 3rem);
+  font-size: clamp(2.25rem, -0.75rem + 15vw, 3rem);
   line-height: 55px;
   color: #FFFFFF;
   padding-bottom: 31px;
@@ -1474,7 +1474,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin-bottom: 160px;
-  gap: 60px;
+  column-gap: 60px;
+  row-gap: 60px;
   justify-items: center;
 }
 .newsletter__top img {
@@ -1608,6 +1609,11 @@ header {
   }
   .newsletter__bottom-form {
     flex: 1 0 170px;
+  }
+}
+@media (max-width: 380px) {
+  .newsletter__top {
+    column-gap: 0px;
   }
 }
 
