@@ -192,6 +192,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  user-select: none;
 }
 
 .header__inner-bottom > ul > li.sales {

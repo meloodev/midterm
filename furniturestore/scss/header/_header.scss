@@ -157,6 +157,7 @@ header {
 
 .header__inner-bottom>ul .list-item {
     @include mixins.flex(flex, center, center, null, 10px);
+    user-select: none;
 }
 
 .header__inner-bottom>ul>li.sales {
