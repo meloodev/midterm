@@ -291,6 +291,7 @@ header .submenu .submenu__item:nth-child(1) ul li:active * {
     .header__inner-bottom ul li:hover>.submenu {
         visibility: visible;
         scale: 1;
+        // animation: header 0.3s linear;
     }
 
     // .header__inner-bottom ul li:active>.submenu {
@@ -782,6 +783,15 @@ header .submenu .submenu__item:nth-child(2) img {
         height: calc(100vh - 123px);
     }
 }
+
+// @keyframes header {
+//     0% {
+//         top: 100px;
+//     }
+//     100% {
+//         top: 80px;
+//     }
+// }
 
 // .header__inner-bottom::after {
 //     content: '';
