@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 649) {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.remove('active');
+            body.classList.remove('active');
+            body.classList.remove('scroll-remove');
         }
 
         // if (window.innerWidth > window.innerHeight) {
