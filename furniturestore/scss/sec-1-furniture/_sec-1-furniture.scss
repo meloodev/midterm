@@ -1,5 +1,4 @@
 @use '../utils/mixins';
-
 .furniture {
     @include mixins.bcolor(#0B3954, null);
     width: 90%;
