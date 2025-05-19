@@ -63,6 +63,7 @@
     }
 
     &__text-footer:active {
+        will-change: transform;
         transform: translateY(-10px);
         -moz-transform: translateY(-10px);
 
@@ -70,6 +71,7 @@
 
     @media (hover : hover) {
         &__text-footer:hover {
+            will-change: transform;
             transform: translateY(-10px);
             -moz-transform: translateY(-10px);
 

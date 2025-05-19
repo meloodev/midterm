@@ -545,11 +545,12 @@ header .submenu .submenu__item:nth-child(2) img {
   }
   body.active,
   body.scroll-remove {
-    overflow-y: hidden;
+    height: 100%;
+    overflow: hidden;
   }
   .scroll {
     height: 100%;
-    overflow-y: scroll;
+    overflow: scroll;
   }
   header .header__inner-bottom ul .sales {
     display: none;
@@ -1314,11 +1315,13 @@ header .submenu .submenu__item:nth-child(2) img {
   border-radius: 4px;
 }
 .slider__text-footer:active {
+  will-change: transform;
   transform: translateY(-10px);
   -moz-transform: translateY(-10px);
 }
 @media (hover: hover) {
   .slider__text-footer:hover {
+    will-change: transform;
     transform: translateY(-10px);
     -moz-transform: translateY(-10px);
   }
