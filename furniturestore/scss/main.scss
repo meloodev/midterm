@@ -1,3 +1,5 @@
+@use '../scss/utils/mixins';
+
 @import './reset';
 
 @import './header/header';
@@ -23,4 +25,90 @@ body {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+
+
+////////right sidebar icons/////////
+.control__panel {
+    display: none;
+}
+
+.control__panel-inner {
+    @include mixins.flex(flex, null, null, column, 5px);
+    position: fixed;
+    right: 0%;
+    top: 60%;
+}
+
+@media(min-width: 940px) {
+    .control__panel {
+        display: block;
+    }
+}
+
+
+.control__panel-inner a {
+    width: 55px;
+    height: 55px;
+    border-radius: 3px;
+    @include mixins.flex(flex, center, center, column, 2px);
+    opacity: .6;
+    transition: opacity .2s ease-in-out;
+}
+
+@media (hover :hover) {
+    .control__panel-inner a:hover {
+        opacity: 1;
+    }
+}
+
+.control__panel-inner a:active {
+    opacity: 1;
+}
+
+
+@keyframes demoflash {
+
+    0%,
+    100%,
+    50% {
+        opacity: 1
+    }
+
+    25%,
+    75% {
+        opacity: .2
+    }
+}
+
+.control__panel-inner a:nth-child(1) span {
+    animation: demoflash 4s ease infinite;
+}
+
+.control__panel-inner a:nth-child(1) {
+    background-color: #06070c;
+}
+
+.control__panel-inner a:nth-child(1) span:nth-child(1) {
+    @include mixins.fontSet(500, 15px, 100%);
+    color: #fff;
+}
+
+
+.control__panel-inner a:nth-child(1) span:nth-child(2) {
+    @include mixins.fontSet(null, 10px, 100%);
+    color: #f3f5f2;
+}
+
+
+
+.control__panel-inner a:nth-child(2) {
+    @include mixins.bcolor(#80b541, #f3f5f2);
+    font-size: 11px;
+}
+
+.control__panel-inner a:nth-child(2) img {
+    width: 22px;
+    height: auto;
 }
