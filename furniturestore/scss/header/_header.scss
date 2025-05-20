@@ -566,13 +566,17 @@ header .submenu .submenu__item:nth-child(2) img {
     body.scroll-remove {
         height: 100%;
         overflow: hidden;
-        // padding-right: 15px; 
     }
 
     .scroll {
         height: 100%;
-        overflow: scroll;
+        overflow: scroll; 
     }
+
+    // body.active .furniture__inner picture img {
+    //     padding-right: 15px;
+    // }
+
 
 
 
@@ -698,6 +702,11 @@ header .submenu .submenu__item:nth-child(2) img {
     body.active header .header__inner-bottom {
         height: calc(100vh - 142px);
     }
+
+    //  body.active,
+    // body.scroll-remove {
+    //      padding-right: unset; 
+    // }
 
 }
 
