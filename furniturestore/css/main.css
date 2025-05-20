@@ -546,7 +546,7 @@ header .submenu .submenu__item:nth-child(2) img {
   body.active,
   body.scroll-remove {
     height: 100%;
-    overflow: hidden;
+    overflow: clip;
   }
   .scroll {
     height: 100%;
