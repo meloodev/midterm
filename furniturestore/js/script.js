@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerSearch = document.querySelector('.header__search');
     const headerSearchCover = document.querySelector('.header .cover');
     const menuList = document.querySelector('.header__inner-bottom');
+    const furnitureLight = document.querySelector('.furniture__light');
 
 
     burgerMenu.addEventListener('click', () => {
@@ -32,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.toggle('active');
             body.classList.remove('scroll-remove');
+        }
+
+        if (furnitureLight.contains(target)) {
+            furnitureLight.classList.toggle('light');
         }
 
     });

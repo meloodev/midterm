@@ -856,6 +856,20 @@ header .submenu .submenu__item:nth-child(2) img {
 .furniture__inner .poit-item .point__cover:hover {
   scale: 0.9;
 }
+.furniture__inner .furniture__light {
+  opacity: 0;
+  position: absolute;
+  top: 23.515%;
+  right: 14.38%;
+  width: 2.6%;
+  z-index: 10;
+  height: auto;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 69px 55px;
+  transition: visibility, opacity 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 @media (hover: hover) {
   .furniture__catalog:hover {
     background-color: #FFB128;
@@ -954,6 +968,12 @@ header .submenu .submenu__item:nth-child(2) img {
 @media (max-width: 768px) {
   .furniture .furniture__inner .point-one.poit-item .furniture__point-descr {
     transform: translate(-4%, 45%);
+  }
+  .furniture__inner .furniture__light {
+    position: absolute;
+    top: 36.299%;
+    right: 18.948%;
+    width: 3.66%;
   }
 }
 @media (max-width: 780px) {
@@ -2231,6 +2251,10 @@ body {
 .control__panel-inner a:nth-child(2) img {
   width: 22px;
   height: auto;
+}
+
+.light {
+  opacity: 0.9 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

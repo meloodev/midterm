@@ -1,4 +1,5 @@
 @use '../utils/mixins';
+
 .furniture {
     @include mixins.bcolor(#0B3954, null);
     width: 90%;
@@ -193,6 +194,23 @@
         scale: .9;
     }
 
+    &__inner &__light {
+        opacity: 0;
+        position: absolute;
+        top: 23.515%;
+        right: 14.38%;
+        width: 2.60%;
+        z-index: 10;
+        height: auto;
+        user-select: none;
+        cursor: pointer;
+        box-shadow: rgb(255 255 255 / 25%) 0px 69px 55px;
+        transition: visibility, opacity .3s;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+
+
 
 
     @media (hover: hover) {
@@ -233,8 +251,8 @@
             gap: 10px;
             transform: translate(-7%, -13%);
             //transform: translate(-15px, -16px);
-
         }
+
     }
 
     @media (max-width: 1140px) {
@@ -318,6 +336,13 @@
         .furniture__inner .point-one.poit-item .furniture__point-descr {
             transform: translate(-4%, 45%);
         }
+
+        &__inner &__light {
+            position: absolute;
+            top: 36.299%;
+            right: 18.948%;
+            width: 3.66%;
+        }
     }
 
     @media (max-width: 780px) {
@@ -384,7 +409,7 @@
 
 
     @media (max-width: 440px) {
-         .furniture__inner .point-one.poit-item .furniture__point-descr {
+        .furniture__inner .point-one.poit-item .furniture__point-descr {
             transform: translate(-17%, 45%);
         }
 
@@ -394,7 +419,7 @@
     }
 
     @media (max-width: 380px) {
-         .furniture__inner .point-one.poit-item .furniture__point-descr {
+        .furniture__inner .point-one.poit-item .furniture__point-descr {
             transform: translate(-21%, 63%);
         }
 
