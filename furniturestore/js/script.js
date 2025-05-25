@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const furnitureLight = document.querySelector('.furniture__light');
 
 
+    const shoppingPrice = document.querySelector('.shopping__price');
+    const shoppingCart = document.querySelector('.header .cart');
+
+    const purchase = document.querySelector('.header .purchase');
+    const purchaseClose = document.querySelector('.header .purchase__close');
+    const overlay = document.querySelector('.header .overlay');
+
+
+
+
+
     burgerMenu.addEventListener('click', () => {
         body.classList.toggle('active');
         headerSearch.classList.remove('active');
@@ -37,6 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (furnitureLight.contains(target)) {
             furnitureLight.classList.toggle('light');
+        }
+
+
+        if (shoppingPrice.contains(target) || shoppingCart.contains(target)) {
+            purchase.classList.add('open');
+            purchase.classList.remove('close');
+            overlay.classList.add('show');
+            body.classList.add('by-scroll');
+        }
+
+        if (purchaseClose.contains(target)) {
+            purchase.classList.add('close');
+            purchase.classList.remove('open');
+            overlay.classList.remove('show');
+            body.classList.remove('by-scroll');
+        }
+
+        if (!purchase.contains(target) && !shoppingPrice.contains(target) && !shoppingCart.contains(target) &&  purchase.classList.contains('open')) {
+            purchase.classList.remove('open');
+            overlay.classList.remove('show');
+            body.classList.remove('by-scroll');
+            console.log('df');
         }
 
     });
