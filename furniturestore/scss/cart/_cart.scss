@@ -13,13 +13,7 @@
     transition: right .3s;
 }
 
-.open {
-    right: 0px;
-}
 
-.close {
-    right: -420px;
-}
 
 .overlay {
     display: none;
@@ -32,14 +26,7 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.show {
-    display: block;
-}
 
-.by-scroll {
-    height: 100%;
-    overflow: hidden;
-}
 
 // .hidden {
 //     display: none;

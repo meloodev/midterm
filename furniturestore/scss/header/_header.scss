@@ -21,6 +21,7 @@ header {
 
 .shopping {
     @include mixins.flex(flex, null, center, null, null);
+    position: relative;
 }
 
 .shopping img {
@@ -34,9 +35,7 @@ header {
 }
 
 
-.display {
-    display: block !important;
-}
+
 
 .cover {
     display: none;
@@ -47,7 +46,7 @@ header {
     top: 0;
     left: 0;
     z-index: 6;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 
@@ -452,11 +451,7 @@ header .submenu .submenu__item:nth-child(2) img {
 
 
 
-    body.active,
-    body.lock {
-        height: 100%;
-        overflow: hidden;
-    }
+
 
     // .scroll {
     //     height: 100%;

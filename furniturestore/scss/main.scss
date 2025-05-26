@@ -4,6 +4,7 @@
 
 @import './header/header';
 @import './cart/cart';
+@import './login-form/login';
 @import './sec-1-furniture/sec-1-furniture';
 @import './sec-2-products/sec-2-products';
 @import './sec-3-slider/sec-3-slider';
@@ -118,4 +119,32 @@ body {
 .light {
     // visibility: visible !important;
     opacity: .9 !important;
+}
+
+
+.show {
+    display: block !important;
+}
+
+.by-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+body.active,
+body.lock {
+    height: 100%;
+    overflow: hidden;
+}
+
+.display {
+    display: block !important;
+}
+
+.open {
+    right: 0px;
+}
+
+.close {
+    right: -420px;
 }

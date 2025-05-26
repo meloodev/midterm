@@ -15,9 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const purchase = document.querySelector('.header .purchase');
     const purchaseClose = document.querySelector('.header .purchase__close');
     const overlay = document.querySelector('.header .overlay');
+    const loginOverlay = document.querySelector('.header .login__overlay');
+
+    const headerLogin = document.querySelector('.header__login');
+    const loginForm = document.querySelector('.header .login');
+    const loginPassInput = document.querySelector('.header .login form .pass__wrap input');
+    const showPassIcon = document.querySelector('.header .login form .pass__wrap .fa-eye');
+
+    const loginFormClose = document.querySelector('.header .login .login__top svg');
 
 
-
+    showPassIcon.addEventListener('click', () => {
+        const isPassword = loginPassInput.type === 'password';
+        loginPassInput.type = isPassword ? 'text' : 'password';
+    });
 
 
     burgerMenu.addEventListener('click', () => {
@@ -35,18 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     body.addEventListener('click', (e) => {
         const target = e.target;
-        if (!burgerMenu.contains(target) && !menuList.contains(target)) {
+        if (!burgerMenu.contains(target) && !menuList.contains(target) && body.classList.contains('active')) {
             body.classList.remove('active');
+            //console.log('1');
         }
 
         if (headerSearchCover.contains(target)) {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.toggle('active');
             body.classList.remove('lock');
+            //console.log('2');
         }
 
         if (furnitureLight.contains(target)) {
             furnitureLight.classList.toggle('light');
+            //console.log('3');
         }
 
 
@@ -55,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             purchase.classList.remove('close');
             overlay.classList.add('show');
             body.classList.add('lock');
+            //console.log('4');
         }
 
         if (purchaseClose.contains(target)) {
@@ -62,12 +77,58 @@ document.addEventListener('DOMContentLoaded', () => {
             purchase.classList.remove('open');
             overlay.classList.remove('show');
             body.classList.remove('lock');
+            //console.log('5');
         }
 
-        if (!purchase.contains(target) && !shoppingPrice.contains(target) && !shoppingCart.contains(target) &&  purchase.classList.contains('open')) {
+        if (purchase.classList.contains('open') && !purchase.contains(target) && overlay.contains(target)) {
             purchase.classList.remove('open');
             overlay.classList.remove('show');
             body.classList.remove('lock');
+            //console.log('6');
+        }
+
+        if (window.innerWidth > 768) {
+            if (headerLogin.contains(target)) {
+                loginForm.classList.toggle('show');
+
+            }
+
+            if (loginFormClose.contains(target)) {
+                loginForm.classList.remove('show');
+
+            }
+        }
+
+
+        if (window.innerWidth < 769) {
+            if (headerLogin.contains(target)) {
+                if (loginForm.classList.contains('show')) {
+                    loginForm.classList.remove('show');
+                }
+                loginForm.classList.toggle('open');
+                loginOverlay.classList.add('show');
+                body.classList.add('lock');
+            }
+
+
+            if (loginFormClose.contains(target)) {
+                loginForm.classList.remove('open');
+                loginOverlay.classList.remove('show');
+                body.classList.remove('lock');
+            }
+
+            if (loginForm.classList.contains('open') && !loginForm.contains(target) && loginOverlay.contains(target)) {
+                loginForm.classList.remove('open');
+                loginOverlay.classList.remove('show');
+                body.classList.remove('lock');
+            }
+        }
+
+
+
+        if (loginForm.classList.contains('show') && !loginForm.contains(target) && !headerLogin.contains(target)) {
+            loginForm.classList.remove('show');
+           // console.log('closed');
         }
 
     });
@@ -78,7 +139,16 @@ document.addEventListener('DOMContentLoaded', () => {
             headerSearch.classList.remove('active');
             body.classList.remove('active');
             body.classList.remove('lock');
+
+
         }
+
+        if (window.innerWidth > 768) {
+            loginForm.classList.remove('open');
+            loginOverlay.classList.remove('show');
+        }
+
+
 
         // if (window.innerWidth > window.innerHeight) {
         //     menuList.classList.add('scroll');
