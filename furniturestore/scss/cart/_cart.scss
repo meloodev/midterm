@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .purchase {
     position: fixed;
     top: 0;
@@ -7,9 +9,7 @@
     z-index: 12;
     height: 100%;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include mixins.flex(flex, space-between, null, column, null);
     transition: right .3s;
 }
 
@@ -48,9 +48,7 @@
 
 .purchase__top {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex(flex, center, center, null, null);
     padding: 20px;
     border-top: 1px solid #00000014;
     border-bottom: 1px solid #00000014;
@@ -87,10 +85,7 @@
 }
 
 .purchase__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex(flex, center, center, column, null);
 }
 
 .purchase__body svg {
@@ -143,9 +138,7 @@
     display: block;
     height: 44px;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex(flex, center, center, null, null);
     background-color: #ffb128;
     font-size: 14px;
     font-family: "Sora", sans-serif;

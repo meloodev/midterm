@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerMenu.addEventListener('click', () => {
         body.classList.toggle('active');
         headerSearch.classList.remove('active');
-
     });
 
     searchIcon.addEventListener('click', () => {
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerMenu.classList.add('active');
         body.classList.remove('active');
         headerSearchCover.classList.add('display');
-        body.classList.add('scroll-remove');
+        body.classList.add('lock');
     });
 
     body.addEventListener('click', (e) => {
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (headerSearchCover.contains(target)) {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.toggle('active');
-            body.classList.remove('scroll-remove');
+            body.classList.remove('lock');
         }
 
         if (furnitureLight.contains(target)) {
@@ -55,21 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
             purchase.classList.add('open');
             purchase.classList.remove('close');
             overlay.classList.add('show');
-            body.classList.add('by-scroll');
+            body.classList.add('lock');
         }
 
         if (purchaseClose.contains(target)) {
             purchase.classList.add('close');
             purchase.classList.remove('open');
             overlay.classList.remove('show');
-            body.classList.remove('by-scroll');
+            body.classList.remove('lock');
         }
 
         if (!purchase.contains(target) && !shoppingPrice.contains(target) && !shoppingCart.contains(target) &&  purchase.classList.contains('open')) {
             purchase.classList.remove('open');
             overlay.classList.remove('show');
-            body.classList.remove('by-scroll');
-            console.log('df');
+            body.classList.remove('lock');
         }
 
     });
@@ -79,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             headerSearchCover.classList.remove('display');
             headerSearch.classList.remove('active');
             body.classList.remove('active');
-            body.classList.remove('scroll-remove');
+            body.classList.remove('lock');
         }
 
         // if (window.innerWidth > window.innerHeight) {

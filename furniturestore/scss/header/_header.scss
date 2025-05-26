@@ -117,6 +117,7 @@ header {
     font-size: 16px;
     line-height: 24px;
     color: #0B3954;
+    cursor: pointer;
 }
 
 .shopping .like {
@@ -451,7 +452,16 @@ header .submenu .submenu__item:nth-child(2) img {
 
 
 
+    body.active,
+    body.lock {
+        height: 100%;
+        overflow: hidden;
+    }
 
+    // .scroll {
+    //     height: 100%;
+    //     overflow: scroll; 
+    // }
 
 
 
@@ -562,16 +572,7 @@ header .submenu .submenu__item:nth-child(2) img {
         overflow-y: auto;
     }
 
-    body.active,
-    body.scroll-remove {
-        height: 100%;
-        overflow: hidden;
-    }
 
-    .scroll {
-        height: 100%;
-        overflow: scroll; 
-    }
 
     // body.active .furniture__inner picture img {
     //     padding-right: 15px;
