@@ -864,7 +864,7 @@ header .submenu .submenu__item:nth-child(2) img {
   padding: 20px 20px 30px 20px;
   border-radius: 8px;
   z-index: 12;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -889,7 +889,7 @@ header .submenu .submenu__item:nth-child(2) img {
 
 .login__top svg:active {
   transform: rotate(180deg);
-  fill: #000;
+  fill: #000000;
 }
 
 .form__pass-recovery a:active {
@@ -907,7 +907,7 @@ header .submenu .submenu__item:nth-child(2) img {
   }
   .login__top svg:hover {
     transform: rotate(180deg);
-    fill: #000;
+    fill: #000000;
   }
   .form__pass-recovery a:hover {
     text-decoration: underline;
@@ -939,7 +939,7 @@ header .submenu .submenu__item:nth-child(2) img {
   padding: 21px 36px 12px 40px;
   border-radius: 5px;
   background-color: #e3e3e3;
-  color: #000;
+  color: #000000;
 }
 
 .login__form .wrap input:focus + label,
@@ -1014,7 +1014,7 @@ header .submenu .submenu__item:nth-child(2) img {
 .login form button[type=submit] {
   height: 44px;
   background-color: #ffb128;
-  color: #fff;
+  color: #ffffff;
   border-radius: 99px;
   width: 100%;
   display: flex;
@@ -1023,7 +1023,7 @@ header .submenu .submenu__item:nth-child(2) img {
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora, sans-serif";
   margin-bottom: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transition: background-color 0.2s;

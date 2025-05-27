@@ -1,3 +1,7 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
+
 .login {
     display: none;
     position: absolute;
@@ -7,14 +11,12 @@
     padding: 20px 20px 30px 20px;
     border-radius: 8px;
     z-index: 12;
-    background-color: #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: variables.$white;
+    box-shadow: variables.$shadow;
 }
 
 .login__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex(flex, space-between, center, null, null);
     margin-bottom: 15px;
 }
 
@@ -27,40 +29,40 @@
 }
 
 .login__top svg:active path {
-    fill: #00000040;
+    fill: variables.$black-25;
 }
 
 .login__top svg:active {
     transform: rotate(180deg);
-    fill: #000;
+    fill: variables.$black;
 }
 
 .form__pass-recovery a:active {
     text-decoration: underline;
-    color: #000000e8;
+    color: variables.$black-90;
 }
 
 .login form button[type="submit"]:active {
-    background-color: #225471;
+    background-color: variables.$deep-teal;
 }
 
 @media (any-hover: hover) {
     .login__top svg:hover path {
-        fill: #00000040;
+        fill: variables.$black-25;
     }
 
     .login__top svg:hover {
         transform: rotate(180deg);
-        fill: #000;
+        fill: variables.$black;
     }
 
     .form__pass-recovery a:hover {
         text-decoration: underline;
-        color: #000000e8;
+        color: variables.$black-90;
     }
 
     .login form button[type="submit"]:hover {
-        background-color: #225471;
+        background-color: variables.$deep-teal;
     }
 
 
@@ -68,7 +70,7 @@
 
 
 .login__top h2 {
-    color: #0b3954;
+    color: variables.$deep-blue;
     font-size: 20px;
     font-weight: 700;
     text-transform: capitalize;
@@ -89,8 +91,8 @@
     width: 100%;
     padding: 21px 36px 12px 40px;
     border-radius: 5px;
-    background-color: #e3e3e3;
-    color: #000;
+    background-color: variables.$gray-200;
+    color: variables.$black;
 }
 
 .login__form .wrap input:focus+label,
@@ -102,14 +104,12 @@
 
 .form__user label,
 .form__password label {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    @include mixins.flex(flex, null, center, null, 4px);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 41px;
-    color: #0000004d;
+    color: variables.$black-30;
     font-size: 13px;
     transition: top .1s;
 }
@@ -126,7 +126,7 @@
     transform: translateY(-50%);
     left: 13px;
     font-size: 16px;
-    color: #0000004d;
+    color: variables.$black-30;
 }
 
 .pass__wrap i:nth-of-type(1) {
@@ -135,7 +135,7 @@
     transform: translateY(-50%);
     left: 13px;
     font-size: 16px;
-    color: #0000004d;
+    color: variables.$black-30;
 }
 
 .pass__wrap i:nth-of-type(2) {
@@ -144,38 +144,34 @@
     transform: translateY(-50%);
     right: 13px;
     font-size: 16px;
-    color: #0000004d;
+    color: variables.$black-30;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     cursor: pointer;
 }
 
 .pass__wrap i:nth-of-type(2):active {
-    color: #000000b7;
+    color: variables.$black-72;
 }
 
 
 .form__remember {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    @include mixins.flex(flex, null, center, null, 10px);
     font-size: 15px;
-    color: #0000004d;
+    color: variables.$black-30;
     margin-bottom: 20px;
 }
 
 .login form button[type="submit"] {
     height: 44px;
     background-color: #ffb128;
-    color: #fff;
+    color: variables.$white;
     border-radius: 99px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex(flex, center, center, null, null);
     font-size: 14px;
     font-weight: 700;
     text-transform: capitalize;
-    font-family: "Sora", sans-serif;
+    font-family: variables.$font-sora;
     margin-bottom: 10px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: background-color 0.2s;
@@ -186,7 +182,7 @@
 }
 
 .form__pass-recovery a {
-    color: #00000080;
+    color: variables.$black-50;
     transition: all .2s;
 }
 
@@ -201,7 +197,7 @@
         height: 100%;
         z-index: 13;
         transition: right 0.3s;
-         border-radius: 0px;
+        border-radius: 0px;
     }
 }
 
