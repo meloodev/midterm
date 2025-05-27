@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const isPassword = loginPassInput.type === 'password';
         loginPassInput.type = isPassword ? 'text' : 'password';
         showPassIcon.classList.replace(
-            isPassword ? 'fa-eye' : 'fa-eye-slash',
-            isPassword ? 'fa-eye-slash' : 'fa-eye'
+            isPassword ? 'fa-eye-slash' : 'fa-eye',
+            isPassword ? 'fa-eye' : 'fa-eye-slash' 
         );
 
     });
