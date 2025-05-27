@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerLogin = document.querySelector('.header__login');
     const loginForm = document.querySelector('.header .login');
     const loginPassInput = document.querySelector('.header .login form .pass__wrap input');
-    const showPassIcon = document.querySelector('.header .login form .pass__wrap .fa-eye');
+    const showPassIcon = document.querySelector('.header .login form .pass__wrap .optic');
 
     const loginFormClose = document.querySelector('.header .login .login__top svg');
 
@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     showPassIcon.addEventListener('click', () => {
         const isPassword = loginPassInput.type === 'password';
         loginPassInput.type = isPassword ? 'text' : 'password';
+        showPassIcon.classList.replace(
+            isPassword ? 'fa-eye' : 'fa-eye-slash',
+            isPassword ? 'fa-eye-slash' : 'fa-eye'
+        );
+
     });
 
 
@@ -128,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (loginForm.classList.contains('show') && !loginForm.contains(target) && !headerLogin.contains(target)) {
             loginForm.classList.remove('show');
-           // console.log('closed');
+            // console.log('closed');
         }
 
     });
