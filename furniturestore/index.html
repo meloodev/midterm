@@ -58,28 +58,32 @@
                             </svg>
                         </div>
 
-                        <form class="login__form">
+                         <form class="login__form" novalidate="novalidate">
                             <div class="form__user">
-                                <div class="wrap login__wrap">
-                                    <input id="user" type="text" required>
-                                    <label for="user">
+                                <label class="wrap login__wrap">
+                                    <input name="username" id="username" autocomplete="username" type="text"
+                                        required="Please enter your username">
+                                    <div class="placeholder">
                                         <span>Username or email</span>
                                         <span class="required">*</span>
-                                    </label>
+                                    </div>
                                     <i class="fa-solid fa-user"></i>
-                                </div>
+                                </label>
+                                <span class="msg"></span>
                             </div>
 
                             <div class="form__password">
-                                <div class="wrap pass__wrap">
-                                    <input id="pass" type="password" required>
-                                    <label for="pass">
+                                <label class="wrap pass__wrap">
+                                    <input name="password" id="password" autocomplete="current-password" type="password"
+                                        required="Please enter your password">
+                                    <div class="placeholder">
                                         <span>Password</span>
                                         <span class="required">*</span>
-                                    </label>
+                                    </div>
                                     <i class="fa-solid fa-lock"></i>
-                                    <i class="optic fa-solid fa-eye-slash" role="button" tabindex="0"></i>
-                                </div>
+                                    <i class="fa-solid fa-eye" role="button" tabindex="0"></i>
+                                </label>
+                                <span class="msg"></span>
                             </div>
                             <div class="form__remember">
                                 <input id="remember" type="checkbox">

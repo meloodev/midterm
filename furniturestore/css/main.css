@@ -864,7 +864,7 @@ header .submenu .submenu__item:nth-child(2) img {
   padding: 20px 20px 30px 20px;
   border-radius: 8px;
   z-index: 12;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -889,7 +889,7 @@ header .submenu .submenu__item:nth-child(2) img {
 
 .login__top svg:active {
   transform: rotate(180deg);
-  fill: #000000;
+  fill: #000;
 }
 
 .form__pass-recovery a:active {
@@ -907,7 +907,7 @@ header .submenu .submenu__item:nth-child(2) img {
   }
   .login__top svg:hover {
     transform: rotate(180deg);
-    fill: #000000;
+    fill: #000;
   }
   .form__pass-recovery a:hover {
     text-decoration: underline;
@@ -926,7 +926,7 @@ header .submenu .submenu__item:nth-child(2) img {
 
 .form__user {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .form__password {
@@ -938,24 +938,27 @@ header .submenu .submenu__item:nth-child(2) img {
   width: 100%;
   padding: 21px 36px 12px 40px;
   border-radius: 5px;
-  background-color: #e3e3e3;
-  color: #000000;
+  background-color: #f1f1f1;
+  color: #000;
 }
 
-.login__form .wrap input:focus + label,
-.login__form .wrap input:valid + label {
-  top: 23%;
+.login__form .wrap input:focus + .placeholder,
+.login__form .wrap input:valid + .placeholder {
+  top: 17%;
   font-size: 11px;
-  opacity: 0.6;
 }
 
-.form__user label,
-.form__password label {
+.login__form .wrap input:focus {
+  outline: 1px solid #00adee;
+}
+
+.form__user label .placeholder,
+.form__password label .placeholder {
   display: flex;
   align-items: center;
   gap: 4px;
   position: absolute;
-  top: 50%;
+  top: 36%;
   transform: translateY(-50%);
   left: 41px;
   color: rgba(0, 0, 0, 0.3019607843);
@@ -963,33 +966,33 @@ header .submenu .submenu__item:nth-child(2) img {
   transition: top 0.1s;
 }
 
-.form__user label .required,
-.form__password label .required {
+.form__user label .placeholder .required,
+.form__password label .placeholder .required {
   color: tomato;
   padding-top: 4px;
 }
 
-.login__wrap i {
+.form__user .login__wrap > i {
   position: absolute;
-  top: 50%;
+  top: 37%;
   transform: translateY(-50%);
   left: 13px;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3019607843);
 }
 
-.pass__wrap i:nth-of-type(1) {
+.form__password .pass__wrap > i:nth-of-type(1) {
   position: absolute;
-  top: 50%;
+  top: 37%;
   transform: translateY(-50%);
   left: 13px;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3019607843);
 }
 
-.pass__wrap i:nth-of-type(2) {
+.form__password .pass__wrap > i:nth-of-type(2) {
   position: absolute;
-  top: 50%;
+  top: 37%;
   transform: translateY(-50%);
   right: 13px;
   font-size: 16px;
@@ -998,7 +1001,7 @@ header .submenu .submenu__item:nth-child(2) img {
   cursor: pointer;
 }
 
-.pass__wrap i:nth-of-type(2):active {
+.form__password .pass__wrap > i:nth-of-type(2):active {
   color: rgba(0, 0, 0, 0.7176470588);
 }
 
@@ -1011,10 +1014,17 @@ header .submenu .submenu__item:nth-child(2) img {
   margin-bottom: 20px;
 }
 
+.form__user .msg,
+.form__password .msg {
+  font-size: 10px;
+  color: tomato;
+  display: inline-block;
+}
+
 .login form button[type=submit] {
   height: 44px;
   background-color: #ffb128;
-  color: #ffffff;
+  color: #fff;
   border-radius: 99px;
   width: 100%;
   display: flex;
@@ -1023,7 +1033,7 @@ header .submenu .submenu__item:nth-child(2) img {
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
-  font-family: "Sora, sans-serif";
+  font-family: "Sora", sans-serif;
   margin-bottom: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transition: background-color 0.2s;
