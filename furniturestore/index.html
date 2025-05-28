@@ -57,28 +57,25 @@
                             </svg>
                         </div>
 
-                        <form class="login__form" novalidate="novalidate">
+                        <form class="login__form">
                             <div class="form__user">
-                                <label class="wrap login__wrap">
-                                    <input name="username" id="username" autocomplete="username" type="text"
-                                        required="Please enter your username">
-                                    <div class="placeholder">
+                                <div class="wrap login__wrap">
+                                    <input id="user" type="text" required>
+                                    <label for="user">
                                         <span>Username or email</span>
                                         <span class="required">*</span>
-                                    </div>
+                                    </label>
                                     <i class="fa-solid fa-user"></i>
-                                </label>
-                                <span class="msg"></span>
+                                </div>
                             </div>
 
                             <div class="form__password">
-                                <label class="wrap pass__wrap">
-                                    <input name="password" id="password" autocomplete="current-password" type="password"
-                                        required="Please enter your password">
-                                    <div class="placeholder">
+                                <div class="wrap pass__wrap">
+                                    <input id="pass" type="password" required>
+                                    <label for="pass">
                                         <span>Password</span>
                                         <span class="required">*</span>
-                                    </div>
+                                    </label>
                                     <i class="fa-solid fa-lock"></i>
                                     <i class="optic fa-solid fa-eye-slash" role="button" tabindex="0"></i>
                                 </div>
