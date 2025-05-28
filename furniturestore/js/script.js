@@ -151,6 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loginFormClose.contains(target)) {
                 loginForm.classList.remove('show');
 
+                usernameErrMsg.textContent = '';
+                passErrMsg.textContent = '';
+                loginInput.value = '';
+                passInput.value = '';
+                loginInput.style.outline = 'none';
+                passInput.style.outline = 'none';
+
             }
         }
 
@@ -170,6 +177,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginForm.classList.remove('open');
                 loginOverlay.classList.remove('show');
                 body.classList.remove('lock');
+
+                usernameErrMsg.textContent = '';
+                passErrMsg.textContent = '';
+                loginInput.value = '';
+                passInput.value = '';
+                loginInput.style.outline = 'none';
+                passInput.style.outline = 'none';
             }
 
             if (loginForm.classList.contains('open') && !loginForm.contains(target) && loginOverlay.contains(target)) {
