@@ -76,7 +76,7 @@
 
 .form__user {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -89,24 +89,28 @@
     width: 100%;
     padding: 21px 36px 12px 40px;
     border-radius: 5px;
-    background-color: #e3e3e3;
+    background-color: #f1f1f1;
     color: #000;
 }
 
-.login__form .wrap input:focus+label,
-.login__form .wrap input:valid+label {
-    top: 23%;
+.login__form .wrap input:focus+.placeholder,
+.login__form .wrap input:valid+.placeholder {
+    top: 17%;
     font-size: 11px;
-    opacity: .6;
+    // opacity: .6;
+}
+.login__form .wrap input:focus {
+    outline: 1px solid #00adee;
 }
 
-.form__user label,
-.form__password label {
+
+.form__user label .placeholder,
+.form__password label .placeholder {
     display: flex;
     align-items: center;
     gap: 4px;
     position: absolute;
-    top: 50%;
+    top: 36%;
     transform: translateY(-50%);
     left: 41px;
     color: #0000004d;
@@ -114,33 +118,33 @@
     transition: top .1s;
 }
 
-.form__user label .required,
-.form__password label .required {
+.form__user label .placeholder .required,
+.form__password label .placeholder .required {
     color: tomato;
     padding-top: 4px;
 }
 
-.login__wrap i {
+.form__user .login__wrap>i {
     position: absolute;
-    top: 50%;
+    top: 37%;
     transform: translateY(-50%);
     left: 13px;
     font-size: 16px;
     color: #0000004d;
 }
 
-.pass__wrap i:nth-of-type(1) {
+.form__password .pass__wrap>i:nth-of-type(1) {
     position: absolute;
-    top: 50%;
+    top: 37%;
     transform: translateY(-50%);
     left: 13px;
     font-size: 16px;
     color: #0000004d;
 }
 
-.pass__wrap i:nth-of-type(2) {
+.form__password .pass__wrap>i:nth-of-type(2) {
     position: absolute;
-    top: 50%;
+    top: 37%;
     transform: translateY(-50%);
     right: 13px;
     font-size: 16px;
@@ -149,7 +153,7 @@
     cursor: pointer;
 }
 
-.pass__wrap i:nth-of-type(2):active {
+.form__password .pass__wrap>i:nth-of-type(2):active {
     color: #000000b7;
 }
 
@@ -161,6 +165,13 @@
     font-size: 15px;
     color: #0000004d;
     margin-bottom: 20px;
+}
+
+.form__user .msg,
+.form__password .msg {
+    font-size: 10px;
+    color: tomato;
+    display: inline-block;
 }
 
 .login form button[type="submit"] {
@@ -201,7 +212,7 @@
         height: 100%;
         z-index: 13;
         transition: right 0.3s;
-         border-radius: 0px;
+        border-radius: 0px;
     }
 }
 

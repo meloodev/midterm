@@ -18,17 +18,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginOverlay = document.querySelector('.header .login__overlay');
 
     const headerLogin = document.querySelector('.header__login');
-    const loginForm = document.querySelector('.header .login');
-    const loginPassInput = document.querySelector('.header .login form .pass__wrap input');
-    const showPassIcon = document.querySelector('.header .login form .pass__wrap .fa-eye');
 
+
+    const loginForm = document.querySelector('.header .login');
+
+    const authForm = document.querySelector('.login form');
+    const loginInput = document.querySelector('.header .login form .login__wrap input');
+    const passInput = document.querySelector('.header .login form .pass__wrap input');
+
+    const usernameErrMsg = document.querySelector('.header .login form .form__user .msg');
+    const passErrMsg = document.querySelector('.header .login form .form__password .msg');
+
+    const showPassIcon = document.querySelector('.header .login form .pass__wrap .fa-eye');
     const loginFormClose = document.querySelector('.header .login .login__top svg');
 
 
     showPassIcon.addEventListener('click', () => {
-        const isPassword = loginPassInput.type === 'password';
-        loginPassInput.type = isPassword ? 'text' : 'password';
+        const isPassword = passInput.type === 'password';
+        passInput.type = isPassword ? 'text' : 'password';
     });
+
+    authForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+        if (!loginInput.value.trim()) {
+            usernameErrMsg.textContent = 'Please enter your username';
+            loginInput.focus();
+            valid = false;
+            loginInput.style.outline = '1px solid tomato';
+        } else {
+            usernameErrMsg.textContent = '';
+        }
+
+        if (!passInput.value.trim()) {
+            passErrMsg.textContent = 'Please enter your password';
+            if (valid) passInput.focus();
+            valid = false;
+            passInput.style.outline = '1px solid tomato';
+        } else {
+            passErrMsg.textContent = '';
+        }
+
+        if (valid) {
+            authForm.submit();
+        }
+    });
+
+    loginInput.addEventListener('input', () => {
+        if (loginInput.value.trim()) {
+            usernameErrMsg.textContent = '';
+            loginInput.style.outline = '1px solid #00adee';
+        } else {
+            loginInput.style.outline = '1px solid tomato';
+            usernameErrMsg.textContent = 'Please enter your username';
+        }
+    });
+
+    passInput.addEventListener('input', () => {
+        if (passInput.value.trim()) {
+            passErrMsg.textContent = '';
+            passInput.style.outline = '1px solid #00adee';
+        } else {
+            passInput.style.outline = '1px solid tomato';
+            passErrMsg.textContent = 'Please enter your password';
+        }
+    });
+
 
 
     burgerMenu.addEventListener('click', () => {
@@ -128,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (loginForm.classList.contains('show') && !loginForm.contains(target) && !headerLogin.contains(target)) {
             loginForm.classList.remove('show');
-           // console.log('closed');
+            // console.log('closed');
         }
 
     });
