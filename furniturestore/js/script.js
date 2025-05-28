@@ -38,25 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
         passInput.type = isPassword ? 'text' : 'password';
     });
 
+    const emailRegex = /^(?:[a-zA-Z0-9._-]{3,20}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
     authForm.addEventListener('submit', (e) => {
         e.preventDefault();
         let valid = true;
-        if (!loginInput.value.trim()) {
-            usernameErrMsg.textContent = 'Please enter your username';
+        const loginVal = loginInput.value.trim();
+        const passVal = passInput.value.trim();
+        if (!loginVal || !emailRegex.test(loginVal)) {
+            usernameErrMsg.textContent = 'Please enter your valid username or email';
             loginInput.focus();
             valid = false;
             loginInput.style.outline = '1px solid tomato';
+            // console.log('false');
         } else {
             usernameErrMsg.textContent = '';
+           // loginInput.style.outline = '';
         }
 
-        if (!passInput.value.trim()) {
-            passErrMsg.textContent = 'Please enter your password';
+        if (!passVal || !passwordRegex.test(passVal)) {
+            passErrMsg.textContent = 'Please enter a valid password';
             if (valid) passInput.focus();
             valid = false;
             passInput.style.outline = '1px solid tomato';
         } else {
-            passErrMsg.textContent = '';
+            passErrMsg.textContent = '';    
+           // passInput.style.outline = '';
+
         }
 
         if (valid) {
