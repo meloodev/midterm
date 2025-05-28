@@ -11,6 +11,7 @@
     @if $ai !=null {
         align-items: $ai;
     }
+    
 
     @if $fd !=null {
         flex-direction: $fd;

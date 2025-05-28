@@ -15,6 +15,7 @@
     box-shadow: variables.$shadow;
 }
 
+
 .login__top {
     @include mixins.flex(flex, space-between, center, null, null);
     margin-bottom: 15px;

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    
     const burgerMenu = document.querySelector('.header__menu');
     const body = document.body;
     const searchIcon = document.querySelector('.search-item');
