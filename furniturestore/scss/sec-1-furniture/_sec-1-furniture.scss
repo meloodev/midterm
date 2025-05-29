@@ -166,7 +166,7 @@
         position: absolute;
         width: 0px;
         height: 0px;
-        right: 100%;
+        right: 99%;
         top: 50%;
         transform: translateY(-50%);
         border-top: 6px solid transparent;
@@ -382,7 +382,7 @@
 
 
         &__inner .poit-item.point-one .furniture__point-descr::after {
-            left: 100%;
+            left: 99%;
             top: 15%;
             transform: translateY(-50%);
             border-right: none;
@@ -391,7 +391,7 @@
 
         &__inner .poit-item.point-two .furniture__point-descr::after {
             left: 50%;
-            top: 99%;
+            top: 98%;
             transform: translateX(-50%);
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
@@ -448,7 +448,7 @@
         }
 
         &__inner .poit-item.point-one .furniture__point-descr::after {
-            left: -3%;
+            left: -2%;
             top: 27%;
             transform: translateY(-50%);
             border-left: none;
@@ -490,7 +490,7 @@
         }
 
         &__inner .poit-item.point-two .furniture__point-descr::after {
-            left: 99%;
+            left: 98%;
             top: 50%;
             transform: translateY(-50%);
             border-left: 6px solid #fff;
