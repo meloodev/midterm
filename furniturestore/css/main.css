@@ -1236,9 +1236,10 @@ header .submenu .submenu__item:nth-child(2) img {
 .furniture__inner .poit-item {
   position: relative;
 }
+.furniture__inner .poit-item .point__descr-cover {
+  display: none;
+}
 .furniture__inner .poit-item .furniture__point-descr {
-  visibility: hidden;
-  scale: 0;
   position: absolute;
   left: 80px;
   top: 0px;
@@ -1272,7 +1273,18 @@ header .submenu .submenu__item:nth-child(2) img {
   border-right: none;
   border-left: 6px solid #fff;
 }
+.furniture__inner .point-one.poit-item .furniture__point-descr {
+  position: absolute;
+  left: 80px;
+  top: 0px;
+}
+.furniture__inner .point-two.poit-item .furniture__point-descr {
+  position: absolute;
+  left: 80px;
+  top: 0px;
+}
 .furniture__inner .point-three.poit-item .furniture__point-descr {
+  position: absolute;
   left: -193px;
   top: 0px;
 }
@@ -1294,9 +1306,8 @@ header .submenu .submenu__item:nth-child(2) img {
 .furniture__inner .poit-item .point__cover:active {
   scale: 0.9;
 }
-.furniture__inner .poit-item:hover .furniture__point-descr {
-  visibility: visible;
-  scale: 1;
+.furniture__inner .poit-item:hover .point__descr-cover {
+  display: block;
 }
 .furniture__inner .poit-item .point__cover:hover {
   scale: 0.9;
@@ -1432,24 +1443,6 @@ header .submenu .submenu__item:nth-child(2) img {
     transform: translate(15%, 50%);
   }
 }
-@media (max-width: 768px) {
-  .furniture .furniture__inner .point-one.poit-item .furniture__point-descr {
-    transform: translate(-4%, 45%);
-  }
-  .furniture__inner .furniture__light {
-    position: absolute;
-    top: 36.299%;
-    right: 18.948%;
-    width: 3.66%;
-  }
-  .furniture__inner .poit-item.point-one .furniture__point-descr::after {
-    left: -3%;
-    top: 27%;
-    transform: translateY(-50%);
-    border-left: none;
-    border-right: 6px solid #fff;
-  }
-}
 @media (max-width: 780px) {
   .furniture .furniture__inner .point-two.poit-item .furniture__point-descr {
     transform: translate(-20%, -108%);
@@ -1469,6 +1462,24 @@ header .submenu .submenu__item:nth-child(2) img {
 @media (max-width: 769px) {
   .furniture .furniture__inner .point-three.poit-item .furniture__point-descr {
     transform: translate(20%, 50%);
+  }
+}
+@media (max-width: 768px) {
+  .furniture .furniture__inner .point-one.poit-item .furniture__point-descr {
+    transform: translate(-4%, 45%);
+  }
+  .furniture__inner .furniture__light {
+    position: absolute;
+    top: 36.299%;
+    right: 18.948%;
+    width: 3.66%;
+  }
+  .furniture__inner .poit-item.point-one .furniture__point-descr::after {
+    left: -3%;
+    top: 27%;
+    transform: translateY(-50%);
+    border-left: none;
+    border-right: 6px solid #fff;
   }
 }
 @media (max-width: 690px) {
