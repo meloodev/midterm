@@ -234,7 +234,7 @@ header {
 .header__inner-bottom ul li:not(:last-child) > span::after {
   content: "";
   position: absolute;
-  left: 100%;
+  left: 99%;
   display: block;
   top: 50%;
   width: 0px;
@@ -242,7 +242,7 @@ header {
   transform: translateY(-50%);
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
-  border-left: 6px solid tomato;
+  border-left: 8px solid tomato;
 }
 
 .header__inner-bottom .list-item span,
