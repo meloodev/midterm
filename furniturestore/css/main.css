@@ -717,7 +717,7 @@ header .submenu .submenu__item:nth-child(2) img {
   }
   body.active header .header__inner-bottom {
     top: 62px;
-    height: calc(100vh - 123px);
+    height: 100%;
   }
 }
 .purchase {
